@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Add discount_amount column to the inline LIST view (main table on sale order) -->
+        <record id="view_order_line_list_fixed_discount" model="ir.ui.view">
+            <field name="name">sale.order.line.list.fixed.discount</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="priority">99</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='order_line']//list//field[@name='price_unit']" position="after">
+                    <field name="discount_amount" widget="monetary" options="{'currency_field': 'currency_id'}" optional="show" string="Discount Amt"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Add discount_amount to the inline FORM popup (when clicking a line) -->
+        <record id="view_order_form_fixed_discount" model="ir.ui.view">
+            <field name="name">sale.order.form.fixed.discount</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="priority">99</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='order_line']/form//field[@name='price_unit']" position="after">
+                    <label for="discount_amount"/>
+                    <div name="discount_amount">
+                        <field name="discount_amount" class="oe_inline" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

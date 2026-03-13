@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <style>
+        body { font-family: 'Roboto', Arial, sans-serif; color: #333; }
+        .header-banner {
+            background: linear-gradient(135deg, #875A7B, #5c3d6e);
+            color: white;
+            padding: 50px 40px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 40px;
+        }
+        .header-banner h1 { font-size: 36px; margin: 0 0 10px 0; font-weight: 700; }
+        .header-banner p { font-size: 18px; margin: 0; opacity: 0.9; }
+        .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-top: 14px;
+        }
+        .section { margin: 40px 0; }
+        .section h2 {
+            font-size: 24px;
+            color: #875A7B;
+            border-bottom: 2px solid #875A7B;
+            padding-bottom: 8px;
+            margin-bottom: 24px;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .feature-card {
+            background: #f9f6fb;
+            border-left: 4px solid #875A7B;
+            border-radius: 6px;
+            padding: 20px;
+        }
+        .feature-card h4 { margin: 0 0 8px 0; color: #5c3d6e; font-size: 16px; }
+        .feature-card p { margin: 0; font-size: 14px; color: #555; line-height: 1.6; }
+        .how-it-works { background: #f5f5f5; border-radius: 8px; padding: 30px; }
+        .steps { display: flex; gap: 20px; margin-top: 20px; }
+        .step {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+        }
+        .step-number {
+            width: 40px; height: 40px;
+            background: #875A7B;
+            color: white;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 18px; font-weight: bold;
+            margin: 0 auto 12px auto;
+        }
+        .step h4 { margin: 0 0 6px 0; font-size: 15px; color: #333; }
+        .step p { margin: 0; font-size: 13px; color: #666; }
+        .use-cases { list-style: none; padding: 0; }
+        .use-cases li {
+            padding: 12px 16px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            background: #fff8ff;
+            border: 1px solid #e8d8f0;
+            font-size: 14px;
+        }
+        .use-cases li::before { content: "✔  "; color: #875A7B; font-weight: bold; }
+        .technical-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+        .technical-table th {
+            background: #875A7B; color: white;
+            padding: 10px 14px; text-align: left;
+        }
+        .technical-table td { padding: 10px 14px; border-bottom: 1px solid #eee; }
+        .technical-table tr:nth-child(even) td { background: #faf7fc; }
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: #f9f6fb;
+            border-radius: 8px;
+            margin-top: 40px;
+            color: #555;
+        }
+        .footer h3 { color: #875A7B; margin-bottom: 6px; }
+    </style>
+</head>
+<body>
+
+<!-- HEADER BANNER -->
+<div class="header-banner">
+    <h1>Sale Order Line Fixed Discount</h1>
+    <p>Apply fixed currency amount discounts directly on sale order lines</p>
+    <span class="badge">Odoo 18 Community &amp; Enterprise</span>
+    <span class="badge">Sales</span>
+    <span class="badge">Invoicing</span>
+</div>
+
+<!-- OVERVIEW -->
+<div class="section">
+    <h2>Overview</h2>
+    <p style="font-size:15px; line-height:1.8; color:#444;">
+        By default, Odoo only allows <strong>percentage-based discounts</strong> on sale order lines.
+        This module adds a <strong>Fixed Discount Amount</strong> field — so you can type in an exact
+        currency amount (e.g. <em>₹500 off</em> or <em>$20 off</em>) and Odoo automatically handles
+        the rest. The percentage is calculated for you. Works on both <strong>Sale Orders</strong>
+        and <strong>Invoices</strong>.
+    </p>
+</div>
+
+<!-- FEATURES -->
+<div class="section">
+    <h2>Key Features</h2>
+    <div class="features-grid">
+        <div class="feature-card">
+            <h4>Fixed Discount Amount Field</h4>
+            <p>Enter an exact discount in your currency directly on each sale order line — no need to calculate percentages manually.</p>
+        </div>
+        <div class="feature-card">
+            <h4>Auto Percentage Calculation</h4>
+            <p>Enter a fixed amount and the discount percentage is calculated automatically. Change the percentage and the amount updates too.</p>
+        </div>
+        <div class="feature-card">
+            <h4>Visible in Table &amp; Popup</h4>
+            <p>The Discount Amount column appears directly in the order lines table — no need to open each line individually.</p>
+        </div>
+        <div class="feature-card">
+            <h4>Invoice Integration</h4>
+            <p>The fixed discount amount carries over to invoices/bills automatically, keeping your accounting accurate.</p>
+        </div>
+        <div class="feature-card">
+            <h4>PDF Quotation Support</h4>
+            <p>Discount amounts print on the PDF quotation and invoice so your customers can clearly see the savings on each line.</p>
+        </div>
+        <div class="feature-card">
+            <h4>Validation &amp; Safety</h4>
+            <p>Built-in validation prevents the discount amount from exceeding the line total — no accidental negative prices.</p>
+        </div>
+    </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="section">
+    <div class="how-it-works">
+        <h2 style="border:none; margin-bottom:0;">How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h4>Install the Module</h4>
+                <p>Install from Apps. No extra configuration required.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h4>Open a Sale Order</h4>
+                <p>You will see a new "Discount Amt" column in the order lines table.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h4>Enter Fixed Discount</h4>
+                <p>Type the discount amount in your currency. The % discount field updates automatically.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h4>Confirm &amp; Invoice</h4>
+                <p>Confirm the order. The discount flows to the invoice and prints on the PDF.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- USE CASES -->
+<div class="section">
+    <h2>Perfect For</h2>
+    <ul class="use-cases">
+        <li>Giving a negotiated fixed discount to a customer (e.g. "₹500 off this order")</li>
+        <li>Sales teams that think in amounts, not percentages</li>
+        <li>Businesses where discounts are agreed in currency terms, not ratios</li>
+        <li>Showing clear discount savings on customer-facing PDF quotations</li>
+        <li>Keeping discount records accurate on invoices for accounting</li>
+    </ul>
+</div>
+
+<!-- TECHNICAL INFO -->
+<div class="section">
+    <h2>Technical Information</h2>
+    <table class="technical-table">
+        <tr><th>Detail</th><th>Value</th></tr>
+        <tr><td>Odoo Version</td><td>18.0</td></tr>
+        <tr><td>Category</td><td>Sales</td></tr>
+        <tr><td>Dependencies</td><td>sale_management, account</td></tr>
+        <tr><td>License</td><td>LGPL-3</td></tr>
+        <tr><td>Models Extended</td><td>sale.order.line, account.move.line</td></tr>
+        <tr><td>No Extra Configuration</td><td>Works immediately after install</td></tr>
+    </table>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    <h3>Developed by Prabhat</h3>
+    <p>For customizations, feature requests, or support — feel free to reach out.</p>
+    <p style="margin-top:8px; font-size:13px; color:#888;">
+        Built with care for the Odoo Community.
+    </p>
+</div>
+
+</body>
+</html>

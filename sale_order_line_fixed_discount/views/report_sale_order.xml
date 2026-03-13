@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_saleorder_document_fixed_discount" inherit_id="sale.report_saleorder_document">
+
+            <!-- Set a variable to know if any line has a fixed discount amount -->
+            <xpath expr="//t[@t-set='display_discount']" position="after">
+                <t t-set="display_discount_amount" t-value="any(l.discount_amount for l in lines_to_report)"/>
+            </xpath>
+
+            <!-- Add column header after the Disc.% header -->
+            <xpath expr="//th[@name='th_discount']" position="after">
+                <th name="th_discount_amount" t-if="display_discount_amount" class="text-end text-nowrap">
+                    Disc. Amt
+                </th>
+            </xpath>
+
+            <!-- Add column data after the Disc.% data cell -->
+            <xpath expr="//td[@t-if='display_discount']" position="after">
+                <td t-if="display_discount_amount" class="text-end text-nowrap">
+                    <span
+                        t-if="line.discount_amount"
+                        t-field="line.discount_amount"
+                        t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/>
+                    <span t-else="">-</span>
+                </td>
+            </xpath>
+
+        </template>
+    </data>
+</odoo>
