@@ -15,7 +15,7 @@
         - Validation to prevent discount exceeding line subtotal
     """,
     'author': 'Prabhat Module',
-    'website': 'https://www.odoo.com',
+    'website': 'https://github.com/Shabdprabhat/prabhat-odoo-modules',
     'depends': ['sale_management', 'account'],
     'data': [
         'security/ir.model.access.csv',
