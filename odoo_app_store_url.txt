@@ -1,0 +1,5 @@
+Repository URL for Odoo App Store:
+ssh://git@github.com/Shabdprabhat/prabhat-odoo-modules.git#18.0
+
+Alternative HTTPS URL (for reference):
+https://github.com/Shabdprabhat/prabhat-odoo-modules.git
