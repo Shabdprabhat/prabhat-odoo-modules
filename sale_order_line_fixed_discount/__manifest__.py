@@ -14,7 +14,7 @@
         - Integration with invoices
         - Validation to prevent discount exceeding line subtotal
     """,
-    'author': 'Prabhat Module',
+    'author': 'Prabhat',
     'website': 'https://github.com/Shabdprabhat/prabhat-odoo-modules',
     'depends': ['sale_management', 'account'],
     'data': [
