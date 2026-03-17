@@ -4,348 +4,356 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sale Order Line Fixed Discount</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <span href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"></span>
-
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a202c; background:#fff; }
-
-        .hero-section    { background: linear-gradient(135deg,#6366f1 0%,#8b5cf6 60%,#a855f7 100%); border-radius:20px; margin-top:10px; padding:70px 30px; text-align:center; }
-        .hero-section h1 { font-size:2.6rem; font-weight:900; color:#ffffff; line-height:1.2; white-space:nowrap; }
-        .hero-section .lead { font-size:1.1rem; color:rgba(255,255,255,0.92); max-width:540px; margin:0 auto; }
-        .hero-badge      { display:inline-block; padding:6px 18px; border-radius:50px; background:rgba(255,255,255,0.18); border:1px solid rgba(255,255,255,0.35); font-size:0.85rem; color:#fff; font-weight:600; margin:4px; }
-        .badge-green     { background:#065f46; border-color:#065f46; }
-
-        .overview-box    { background:#faf5ff; border-left:6px solid #7c3aed; border-radius:10px; padding:24px 28px; }
-        .overview-box h2 { color:#7c3aed; font-size:1.35rem; font-weight:800; margin-bottom:10px; }
-
-        .step-number { font-size:3.8rem; font-weight:900; line-height:1; opacity:0.22; }
-
-        .screenshot-wrap { border-radius:14px; overflow:hidden; box-shadow:0 6px 28px rgba(0,0,0,0.13); }
-        .ss-header       { padding:11px 18px; color:#fff; font-size:13px; font-weight:700; }
-        .screenshot-wrap img { width:100%; display:block; }
-
-        .bg-purple-light { background:linear-gradient(135deg,#faf5ff,#ede9fe); border-radius:20px; margin-top:10px; }
-        .bg-pink-light   { background:linear-gradient(135deg,#fff1f2,#fce7f3); border-radius:20px; margin-top:10px; }
-
-        .f-icon { width:54px; height:54px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:1.5rem; margin-bottom:14px; }
-
-        .uc-card { border-radius:16px; padding:28px; height:100%; }
-        .uc-card h4 { font-size:1rem; font-weight:700; margin-bottom:12px; }
-        .uc-card li { font-size:0.88rem; color:#4a5568; margin-bottom:5px; list-style:none; padding-left:0; }
-        .uc-card li::before { content:"✓  "; font-weight:800; }
-
-        /* ── FOOTER ── */
-        .footer-wrap { background:linear-gradient(135deg,#1e1b4b,#312e81,#4c1d95); border-radius:20px; margin-top:10px; padding:60px 20px; text-align:center; }
-
-        .dev-circle { width:88px; height:88px; background:linear-gradient(135deg,#6366f1,#a855f7); border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:2.5rem; border:4px solid rgba(255,255,255,0.22); margin-bottom:18px; }
-
-        .service-pill { display:inline-block; padding:6px 16px; border-radius:50px; font-size:0.82rem; font-weight:600; margin:4px; border:1px solid; }
-
-        /* contact grid card */
-        .c-card { background:rgba(255,255,255,0.10); border:1px solid rgba(255,255,255,0.22); border-radius:16px; padding:22px 14px; text-align:center; height:100%; }
-        .c-card .c-ico   { font-size:2rem; display:block; margin-bottom:10px; }
-        .c-card .c-lbl   { display:block; font-size:0.68rem; text-transform:uppercase; letter-spacing:1px; color:rgba(255,255,255,0.45); margin-bottom:6px; }
-        .c-card .c-val   { display:block; font-size:0.9rem; font-weight:700; color:#ffffff; word-break:break-word; }
-    </style>
 </head>
-<body>
+<body style="margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;background:#ffffff;color:#2c3e50;">
 
 
-<!-- ════════════════════════
-     HERO
-════════════════════════ -->
-<section class="hero-section">
-    <div class="mb-3">
-        <span style="font-size:0.85rem;padding:7px 20px;background:rgba(255,255,255,0.18);border-radius:50px;display:inline-block;font-weight:600;color:#fff;">
+<!-- ═══════ HERO ═══════ -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:10px;">
+<tr>
+<td bgcolor="#1e40af" style="background-color:#1e40af;padding:80px 30px;text-align:center;border-radius:20px;">
+
+    <div style="margin-bottom:16px;">
+        <span style="font-size:14px;padding:8px 20px;background-color:rgba(255,255,255,0.2);border-radius:50px;display:inline-block;font-weight:500;color:#ffffff;">
             Sale Order Line Fixed Discount &nbsp;·&nbsp; by Prabhat
         </span>
     </div>
-    <h1 class="mb-4">Type the amount. Odoo does the math.</h1>
-    <p class="lead mb-4">
-        Stop calculating percentages manually. Enter exact discount amounts on every sale order line — the % fills in automatically.
-    </p>
+
+    <div style="font-size:52px;font-weight:800;color:#ffffff;margin:0 0 20px 0;line-height:1.15;">
+        Type the amount.<br/>Odoo does the math.
+    </div>
+
+    <div style="font-size:18px;color:#bfdbfe;max-width:680px;margin:0 auto 30px;line-height:1.7;">
+        Stop reverse-calculating percentages. Enter exact discount amounts on every sale order line — the % fills in automatically.
+    </div>
+
     <div>
-        <span class="hero-badge">✦ Odoo 18</span>
-        <span class="hero-badge">🛒 Sales &amp; Invoicing</span>
-        <span class="hero-badge badge-green">🆓 Free Module</span>
-        <span class="hero-badge">🇮🇳 Made in India</span>
+        <span style="font-size:14px;padding:8px 20px;background-color:rgba(255,255,255,0.15);border-radius:50px;display:inline-block;font-weight:500;color:#ffffff;margin:4px;">✦ Odoo 18</span>
+        <span style="font-size:14px;padding:8px 20px;background-color:rgba(255,255,255,0.15);border-radius:50px;display:inline-block;font-weight:500;color:#ffffff;margin:4px;">🛒 Sales &amp; Invoicing</span>
+        <span style="font-size:14px;padding:8px 20px;background-color:rgba(34,197,94,0.3);border-radius:50px;display:inline-block;font-weight:600;color:#ffffff;margin:4px;">🆓 Free Module</span>
+        <span style="font-size:14px;padding:8px 20px;background-color:rgba(255,255,255,0.15);border-radius:50px;display:inline-block;font-weight:500;color:#ffffff;margin:4px;">🇮🇳 Made in India</span>
     </div>
-</section>
+
+</td>
+</tr>
+</table>
 
 
-<!-- ════════════════════════
-     OVERVIEW
-════════════════════════ -->
-<section class="py-5">
-    <div class="container">
-        <div class="overview-box">
-            <h2>What This Module Does</h2>
-            <p style="color:#1a1a1a;font-size:0.97rem;line-height:1.8;margin:0;">
-                Odoo only supports <strong>percentage-based discounts</strong> on sale order lines by default.
-                When a customer asks for <strong style="color:#7c3aed;">"₹500 off"</strong> or <strong style="color:#7c3aed;">"$20 off"</strong>,
-                you have to reverse-calculate the percentage yourself. This module adds a
-                <strong style="color:#7c3aed;">Fixed Discount Amount</strong> field on each order line —
-                enter the exact amount and Odoo calculates the % automatically.
-                Works on <strong>Sale Orders</strong> and <strong>Invoices</strong>.
-            </p>
-        </div>
+<!-- ═══════ HOW IT WORKS ═══════ -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td style="padding:60px 30px 20px;">
+
+    <div style="font-size:36px;font-weight:700;color:#1a202c;text-align:center;margin-bottom:12px;">
+        From install to discount in minutes
     </div>
-</section>
-
-
-<!-- ════════════════════════
-     HOW IT WORKS
-════════════════════════ -->
-<section class="py-5">
-    <div class="container">
-        <h2 class="text-center mb-2" style="font-size:2rem;font-weight:800;color:#1a202c;">From install to discount in 4 steps</h2>
-        <p class="text-center mb-5" style="color:#718096;max-width:520px;margin-left:auto;margin-right:auto;">Zero configuration — just install and start discounting the right way.</p>
-        <div class="row text-center">
-            <div class="col-md-3 mb-4">
-                <div class="step-number" style="color:#6366f1;">01</div>
-                <h4 class="mt-2 mb-2" style="font-size:1rem;font-weight:700;color:#6366f1;">Install the Module</h4>
-                <p style="color:#718096;font-size:0.9rem;">Search "Fixed Discount" in the Odoo Apps menu and install in one click.</p>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="step-number" style="color:#ec4899;">02</div>
-                <h4 class="mt-2 mb-2" style="font-size:1rem;font-weight:700;color:#ec4899;">Open a Sale Order</h4>
-                <p style="color:#718096;font-size:0.9rem;">See the new "Discount Amount" column appear on every order line.</p>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="step-number" style="color:#f97316;">03</div>
-                <h4 class="mt-2 mb-2" style="font-size:1rem;font-weight:700;color:#f97316;">Enter the Amount</h4>
-                <p style="color:#718096;font-size:0.9rem;">Type ₹500 or $20 — the discount % calculates and fills in immediately.</p>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="step-number" style="color:#10b981;">04</div>
-                <h4 class="mt-2 mb-2" style="font-size:1rem;font-weight:700;color:#10b981;">Confirm &amp; Invoice</h4>
-                <p style="color:#718096;font-size:0.9rem;">Confirm the order. Discount flows to the invoice with no re-entry.</p>
-            </div>
-        </div>
+    <div style="font-size:16px;color:#718096;text-align:center;max-width:580px;margin:0 auto 50px;">
+        Zero configuration — install and start discounting the right way instantly.
     </div>
-</section>
+
+    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr valign="top">
+
+        <td width="25%" style="padding:0 16px;text-align:center;">
+            <div style="font-size:64px;font-weight:800;color:#2563eb;line-height:1;opacity:0.25;">01</div>
+            <div style="font-size:18px;font-weight:600;color:#1a202c;margin:8px 0 8px;">Install the Module</div>
+            <div style="font-size:14px;color:#718096;line-height:1.7;">Search "Fixed Discount" in Apps and install in one click.</div>
+        </td>
+
+        <td width="25%" style="padding:0 16px;text-align:center;">
+            <div style="font-size:64px;font-weight:800;color:#0891b2;line-height:1;opacity:0.25;">02</div>
+            <div style="font-size:18px;font-weight:600;color:#1a202c;margin:8px 0 8px;">Open a Sale Order</div>
+            <div style="font-size:14px;color:#718096;line-height:1.7;">See the new "Discount Amount" column on every order line.</div>
+        </td>
+
+        <td width="25%" style="padding:0 16px;text-align:center;">
+            <div style="font-size:64px;font-weight:800;color:#059669;line-height:1;opacity:0.25;">03</div>
+            <div style="font-size:18px;font-weight:600;color:#1a202c;margin:8px 0 8px;">Enter the Amount</div>
+            <div style="font-size:14px;color:#718096;line-height:1.7;">Type ₹500 or $20 — the % calculates and fills in immediately.</div>
+        </td>
+
+        <td width="25%" style="padding:0 16px;text-align:center;">
+            <div style="font-size:64px;font-weight:800;color:#d97706;line-height:1;opacity:0.25;">04</div>
+            <div style="font-size:18px;font-weight:600;color:#1a202c;margin:8px 0 8px;">Confirm &amp; Invoice</div>
+            <div style="font-size:14px;color:#718096;line-height:1.7;">Discount flows to the invoice automatically.</div>
+        </td>
+
+    </tr>
+    </table>
+
+</td>
+</tr>
+</table>
 
 
-<!-- ════════════════════════
-     SCREENSHOT 1
-════════════════════════ -->
-<section class="py-4">
-    <div class="container">
-        <h2 class="text-center mb-2" style="font-size:1.8rem;font-weight:800;color:#1a202c;">Fixed Discount on Sale Order Lines</h2>
-        <p class="text-center mb-4" style="color:#718096;">New "Discount Amount" column — type the amount, percentage fills automatically.</p>
-        <div class="screenshot-wrap">
-            <div class="ss-header" style="background:linear-gradient(90deg,#6366f1,#8b5cf6);">📋 &nbsp;Sale Order with Discount Amount</div>
-            <img src="sale_order_discount_amount.png" alt="Sale Order Fixed Discount" />
-        </div>
+<!-- ═══════ SCREENSHOT 1 ═══════ -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td style="padding:40px 30px 20px;">
+    <div style="font-size:24px;font-weight:700;color:#1a202c;text-align:center;margin-bottom:8px;">Fixed Discount on Sale Order Lines</div>
+    <div style="font-size:15px;color:#718096;text-align:center;margin-bottom:20px;">New "Discount Amount" column — type the amount, percentage fills automatically.</div>
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border:2px solid #2563eb;border-radius:16px;overflow:hidden;">
+    <tr>
+        <td bgcolor="#2563eb" style="background-color:#2563eb;padding:12px 18px;">
+            <span style="color:#ffffff;font-size:14px;font-weight:600;">📋 &nbsp;Sale Order with Discount Amount</span>
+        </td>
+    </tr>
+    <tr>
+        <td style="padding:0;"><img src="sale_order_discount_amount.png" alt="Sale Order Fixed Discount" width="100%" style="display:block;width:100%;" /></td>
+    </tr>
+    </table>
+</td>
+</tr>
+</table>
+
+
+<!-- ═══════ SCREENSHOT 2 ═══════ -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td style="padding:20px 30px 40px;">
+    <div style="font-size:24px;font-weight:700;color:#1a202c;text-align:center;margin-bottom:8px;">Discount Flows to Invoice Automatically</div>
+    <div style="font-size:15px;color:#718096;text-align:center;margin-bottom:20px;">No re-entry needed — discount carries over when you create an invoice.</div>
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border:2px solid #0891b2;border-radius:16px;overflow:hidden;">
+    <tr>
+        <td bgcolor="#0891b2" style="background-color:#0891b2;padding:12px 18px;">
+            <span style="color:#ffffff;font-size:14px;font-weight:600;">📄 &nbsp;Invoice with Discount Amount</span>
+        </td>
+    </tr>
+    <tr>
+        <td style="padding:0;"><img src="invoice_discount_amount.png" alt="Invoice Fixed Discount" width="100%" style="display:block;width:100%;" /></td>
+    </tr>
+    </table>
+</td>
+</tr>
+</table>
+
+
+<!-- ═══════ KEY FEATURES ═══════ -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:10px;">
+<tr>
+<td bgcolor="#eff6ff" style="background-color:#eff6ff;padding:60px 30px;border-radius:20px;">
+
+    <div style="font-size:36px;font-weight:700;color:#1a202c;text-align:center;margin-bottom:12px;">
+        Everything you need — nothing you don't
     </div>
-</section>
-
-
-<!-- ════════════════════════
-     SCREENSHOT 2
-════════════════════════ -->
-<section class="py-4">
-    <div class="container">
-        <h2 class="text-center mb-2" style="font-size:1.8rem;font-weight:800;color:#1a202c;">Discount Flows to Invoice Automatically</h2>
-        <p class="text-center mb-4" style="color:#718096;">No re-entry needed — discount carries over when you create an invoice.</p>
-        <div class="screenshot-wrap">
-            <div class="ss-header" style="background:linear-gradient(90deg,#ec4899,#f43f5e);">📄 &nbsp;Invoice with Discount Amount</div>
-            <img src="invoice_discount_amount.png" alt="Invoice Fixed Discount" />
-        </div>
+    <div style="font-size:16px;color:#718096;text-align:center;max-width:580px;margin:0 auto 50px;">
+        One lightweight module. No extra dependencies, no complex configuration.
     </div>
-</section>
+
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:20px;">
+    <tr valign="top">
+
+        <td width="33%" style="padding:0 10px 0 0;">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+            <tr><td bgcolor="#ffffff" style="background-color:#ffffff;border-radius:16px;border:1px solid #e2e8f0;padding:35px;">
+                <div style="font-size:40px;margin-bottom:15px;">💲</div>
+                <div style="font-size:20px;font-weight:600;color:#1a202c;margin-bottom:12px;">Fixed Amount Discount</div>
+                <div style="font-size:14px;color:#4a5568;line-height:1.7;">Enter the exact discount in your local currency on each order line — no formula needed.</div>
+            </td></tr>
+            </table>
+        </td>
+
+        <td width="33%" style="padding:0 5px;">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+            <tr><td bgcolor="#ffffff" style="background-color:#ffffff;border-radius:16px;border:1px solid #e2e8f0;padding:35px;">
+                <div style="font-size:40px;margin-bottom:15px;">⚡</div>
+                <div style="font-size:20px;font-weight:600;color:#1a202c;margin-bottom:12px;">Auto % Calculation</div>
+                <div style="font-size:14px;color:#4a5568;line-height:1.7;">Discount % updates automatically as you type. Both fields always stay in sync.</div>
+            </td></tr>
+            </table>
+        </td>
+
+        <td width="33%" style="padding:0 0 0 10px;">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+            <tr><td bgcolor="#ffffff" style="background-color:#ffffff;border-radius:16px;border:1px solid #e2e8f0;padding:35px;">
+                <div style="font-size:40px;margin-bottom:15px;">📋</div>
+                <div style="font-size:20px;font-weight:600;color:#1a202c;margin-bottom:12px;">Invoice Integration</div>
+                <div style="font-size:14px;color:#4a5568;line-height:1.7;">Discounts flow seamlessly into invoices created from confirmed sale orders.</div>
+            </td></tr>
+            </table>
+        </td>
+
+    </tr>
+    </table>
+
+    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr valign="top">
+
+        <td width="33%" style="padding:0 10px 0 0;">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+            <tr><td bgcolor="#ffffff" style="background-color:#ffffff;border-radius:16px;border:1px solid #e2e8f0;padding:35px;">
+                <div style="font-size:40px;margin-bottom:15px;">🔧</div>
+                <div style="font-size:20px;font-weight:600;color:#1a202c;margin-bottom:12px;">Zero Configuration</div>
+                <div style="font-size:14px;color:#4a5568;line-height:1.7;">Install and start using immediately. No settings, no extra modules required.</div>
+            </td></tr>
+            </table>
+        </td>
+
+        <td width="33%" style="padding:0 5px;">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+            <tr><td bgcolor="#ffffff" style="background-color:#ffffff;border-radius:16px;border:1px solid #e2e8f0;padding:35px;">
+                <div style="font-size:40px;margin-bottom:15px;">🔄</div>
+                <div style="font-size:20px;font-weight:600;color:#1a202c;margin-bottom:12px;">Two-Way Sync</div>
+                <div style="font-size:14px;color:#4a5568;line-height:1.7;">Change % → amount updates. Change amount → % updates. Works both ways.</div>
+            </td></tr>
+            </table>
+        </td>
+
+        <td width="33%" style="padding:0 0 0 10px;">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+            <tr><td bgcolor="#ffffff" style="background-color:#ffffff;border-radius:16px;border:1px solid #e2e8f0;padding:35px;">
+                <div style="font-size:40px;margin-bottom:15px;">🧾</div>
+                <div style="font-size:20px;font-weight:600;color:#1a202c;margin-bottom:12px;">PDF Quotations</div>
+                <div style="font-size:14px;color:#4a5568;line-height:1.7;">Discount amounts show clearly on printed quotations for customers.</div>
+            </td></tr>
+            </table>
+        </td>
+
+    </tr>
+    </table>
+
+</td>
+</tr>
+</table>
 
 
-<!-- ════════════════════════
-     KEY FEATURES
-════════════════════════ -->
-<section class="py-5 bg-purple-light" style="background:linear-gradient(135deg,#faf5ff,#ede9fe);border-radius:20px;margin-top:10px;">
-    <div class="container">
-        <h2 class="text-center mb-2" style="font-size:2rem;font-weight:800;color:#1a202c;">Everything you need — nothing you don't</h2>
-        <p class="text-center mb-5" style="color:#718096;max-width:520px;margin-left:auto;margin-right:auto;">One lightweight module. No extra dependencies, no complex configuration.</p>
-        <div class="row">
+<!-- ═══════ PERFECT FOR ═══════ -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td style="padding:60px 30px;">
 
-            <div class="col-md-4 mb-4">
-                <div class="card h-100" style="border-radius:16px;border:2px solid #ddd6fe;background:#fff;">
-                    <div class="card-body" style="padding:28px;">
-                        <div class="f-icon" style="background:linear-gradient(135deg,#ede9fe,#ddd6fe);">💲</div>
-                        <h3 style="font-size:1.05rem;font-weight:700;color:#6d28d9;margin-bottom:8px;">Fixed Amount Discount</h3>
-                        <p style="color:#4a5568;font-size:0.9rem;margin:0;">Enter the exact discount in your local currency on each order line — no formula, no guesswork.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 mb-4">
-                <div class="card h-100" style="border-radius:16px;border:2px solid #bfdbfe;background:#fff;">
-                    <div class="card-body" style="padding:28px;">
-                        <div class="f-icon" style="background:linear-gradient(135deg,#dbeafe,#bfdbfe);">⚡</div>
-                        <h3 style="font-size:1.05rem;font-weight:700;color:#1d4ed8;margin-bottom:8px;">Auto % Calculation</h3>
-                        <p style="color:#4a5568;font-size:0.9rem;margin:0;">The standard Odoo discount % field updates automatically as you type. Always in sync.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 mb-4">
-                <div class="card h-100" style="border-radius:16px;border:2px solid #a7f3d0;background:#fff;">
-                    <div class="card-body" style="padding:28px;">
-                        <div class="f-icon" style="background:linear-gradient(135deg,#d1fae5,#a7f3d0);">📋</div>
-                        <h3 style="font-size:1.05rem;font-weight:700;color:#065f46;margin-bottom:8px;">Invoice Integration</h3>
-                        <p style="color:#4a5568;font-size:0.9rem;margin:0;">Discount amounts flow seamlessly into invoices created from confirmed sale orders.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 mb-4">
-                <div class="card h-100" style="border-radius:16px;border:2px solid #fbcfe8;background:#fff;">
-                    <div class="card-body" style="padding:28px;">
-                        <div class="f-icon" style="background:linear-gradient(135deg,#fce7f3,#fbcfe8);">🔧</div>
-                        <h3 style="font-size:1.05rem;font-weight:700;color:#9d174d;margin-bottom:8px;">Zero Configuration</h3>
-                        <p style="color:#4a5568;font-size:0.9rem;margin:0;">Install and start using immediately. No settings, no extra modules required.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 mb-4">
-                <div class="card h-100" style="border-radius:16px;border:2px solid #fed7aa;background:#fff;">
-                    <div class="card-body" style="padding:28px;">
-                        <div class="f-icon" style="background:linear-gradient(135deg,#ffedd5,#fed7aa);">🔄</div>
-                        <h3 style="font-size:1.05rem;font-weight:700;color:#c2410c;margin-bottom:8px;">Two-Way Sync</h3>
-                        <p style="color:#4a5568;font-size:0.9rem;margin:0;">Change the % and amount updates. Change amount and % updates. Works both ways.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 mb-4">
-                <div class="card h-100" style="border-radius:16px;border:2px solid #99f6e4;background:#fff;">
-                    <div class="card-body" style="padding:28px;">
-                        <div class="f-icon" style="background:linear-gradient(135deg,#ccfbf1,#99f6e4);">🧾</div>
-                        <h3 style="font-size:1.05rem;font-weight:700;color:#0f766e;margin-bottom:8px;">PDF Quotations</h3>
-                        <p style="color:#4a5568;font-size:0.9rem;margin:0;">Discount amounts show clearly on printed quotations — customers see exact savings.</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
+    <div style="font-size:36px;font-weight:700;color:#1a202c;text-align:center;margin-bottom:12px;">
+        Perfect for every sales scenario
     </div>
-</section>
-
-
-<!-- ════════════════════════
-     PERFECT FOR
-════════════════════════ -->
-<section class="py-5 bg-pink-light" style="background:linear-gradient(135deg,#fff1f2,#fce7f3);border-radius:20px;margin-top:10px;">
-    <div class="container">
-        <h2 class="text-center mb-2" style="font-size:2rem;font-weight:800;color:#1a202c;">Perfect for every sales scenario</h2>
-        <p class="text-center mb-5" style="color:#718096;">Any team that gives discounts in currency terms will love this.</p>
-        <div class="row">
-
-            <div class="col-md-4 mb-4">
-                <div class="uc-card" style="background:#faf5ff;border:2px solid #ddd6fe;">
-                    <div style="font-size:2.2rem;margin-bottom:12px;">🤝</div>
-                    <h4 style="color:#6d28d9;">Negotiated Deals</h4>
-                    <ul style="padding:0;margin:0;">
-                        <li style="color:#4a5568;">Customer says "₹500 off this order"</li>
-                        <li style="color:#4a5568;">Just type 500 — done instantly</li>
-                        <li style="color:#4a5568;">No percentage calculation needed</li>
-                        <li style="color:#4a5568;">Works per line or per product</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-md-4 mb-4">
-                <div class="uc-card" style="background:#fff1f2;border:2px solid #fecdd3;">
-                    <div style="font-size:2.2rem;margin-bottom:12px;">💼</div>
-                    <h4 style="color:#be123c;">B2B &amp; Wholesale</h4>
-                    <ul style="padding:0;margin:0;">
-                        <li style="color:#4a5568;">Contract discounts in currency terms</li>
-                        <li style="color:#4a5568;">Flat ₹200 off per unit on bulk orders</li>
-                        <li style="color:#4a5568;">Consistent across all order lines</li>
-                        <li style="color:#4a5568;">Reduces billing errors to zero</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-md-4 mb-4">
-                <div class="uc-card" style="background:#eff6ff;border:2px solid #bfdbfe;">
-                    <div style="font-size:2.2rem;margin-bottom:12px;">📊</div>
-                    <h4 style="color:#1d4ed8;">Sales Teams</h4>
-                    <ul style="padding:0;margin:0;">
-                        <li style="color:#4a5568;">Reps think in amounts not percentages</li>
-                        <li style="color:#4a5568;">Faster order entry, less mental math</li>
-                        <li style="color:#4a5568;">Accurate discounts every time</li>
-                        <li style="color:#4a5568;">Clear savings on PDF quotations</li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
+    <div style="font-size:16px;color:#718096;text-align:center;max-width:580px;margin:0 auto 50px;">
+        Any team that gives discounts in currency terms will love this module.
     </div>
-</section>
 
+    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr valign="top">
 
-<!-- ════════════════════════
-     DEVELOPER FOOTER
-════════════════════════ -->
-<section class="footer-wrap" style="background:linear-gradient(135deg,#1e1b4b,#312e81,#4c1d95);border-radius:20px;margin-top:10px;padding:60px 20px;text-align:center;">
-    <div class="container">
-
-        <!-- Avatar -->
-        <div class="dev-circle" style="width:88px;height:88px;background:linear-gradient(135deg,#6366f1,#a855f7);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:2.5rem;border:4px solid rgba(255,255,255,0.22);margin-bottom:18px;">👨‍💻</div>
-
-        <!-- Name & title -->
-        <h3 style="color:#ffffff;font-size:1.9rem;font-weight:900;margin:0 0 6px;">Prabhat</h3>
-        <p style="color:rgba(255,255,255,0.70);font-size:1rem;margin:0 0 4px;">Odoo Developer</p>
-        <p style="color:rgba(255,255,255,0.40);font-size:0.85rem;margin:0 0 28px;">📍 India &nbsp;·&nbsp; Available Worldwide</p>
-
-        <!-- Services pills -->
-        <div class="mb-4">
-            <span class="service-pill" style="background:rgba(139,92,246,0.25);color:#c4b5fd;border-color:rgba(139,92,246,0.45);">🔧 Customization</span>
-            <span class="service-pill" style="background:rgba(99,102,241,0.25);color:#a5b4fc;border-color:rgba(99,102,241,0.45);">🔄 Migration</span>
-            <span class="service-pill" style="background:rgba(236,72,153,0.25);color:#f9a8d4;border-color:rgba(236,72,153,0.45);">🧩 Module Development</span>
-            <span class="service-pill" style="background:rgba(16,185,129,0.25);color:#6ee7b7;border-color:rgba(16,185,129,0.45);">🐛 Bug Fixing</span>
-            <span class="service-pill" style="background:rgba(249,115,22,0.25);color:#fdba74;border-color:rgba(249,115,22,0.45);">🔗 Integration</span>
-        </div>
-
-        <!-- Availability -->
-        <div class="mb-5">
-            <span style="display:inline-block;background:rgba(16,185,129,0.18);border:2px solid #34d399;border-radius:50px;padding:10px 28px;color:#6ee7b7;font-size:0.92rem;font-weight:700;">
-                🟢 &nbsp;Available for Odoo Projects
-            </span>
-        </div>
-
-        <!-- Contact cards — Bootstrap grid centered -->
-        <div class="row justify-content-center mb-5">
-            <div class="col-md-3 col-sm-4 col-6 mb-3">
-                <div class="c-card" style="background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.22);border-radius:16px;padding:22px 12px;text-align:center;">
-                    <span class="c-ico" style="font-size:2rem;display:block;margin-bottom:10px;">📱</span>
-                    <span class="c-lbl" style="display:block;font-size:0.68rem;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,0.45);margin-bottom:6px;">WhatsApp</span>
-                    <span class="c-val" style="display:block;font-size:0.88rem;font-weight:700;color:#ffffff;">+91 7982425142</span>
+        <td width="33%" style="padding:0 10px 0 0;">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+            <tr><td bgcolor="#ffffff" style="background-color:#ffffff;border-radius:16px;border:1px solid #e2e8f0;padding:35px;">
+                <div style="font-size:40px;margin-bottom:15px;">🤝</div>
+                <div style="font-size:20px;font-weight:600;color:#1a202c;margin-bottom:12px;">Negotiated Deals</div>
+                <div style="font-size:14px;color:#4a5568;">
+                    <div style="margin-bottom:8px;">✓ &nbsp;Customer says "₹500 off"</div>
+                    <div style="margin-bottom:8px;">✓ &nbsp;Just type 500 — done instantly</div>
+                    <div style="margin-bottom:8px;">✓ &nbsp;No % calculation needed</div>
+                    <div style="margin-bottom:8px;">✓ &nbsp;Works per line or per product</div>
                 </div>
-            </div>
-            <div class="col-md-3 col-sm-4 col-6 mb-3">
-                <div class="c-card" style="background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.22);border-radius:16px;padding:22px 12px;text-align:center;">
-                    <span class="c-ico" style="font-size:2rem;display:block;margin-bottom:10px;">✉️</span>
-                    <span class="c-lbl" style="display:block;font-size:0.68rem;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,0.45);margin-bottom:6px;">Email</span>
-                    <span class="c-val" style="display:block;font-size:0.82rem;font-weight:700;color:#ffffff;">prabhatshaw24@gmail.com</span>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-4 col-6 mb-3">
-                <div class="c-card" style="background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.22);border-radius:16px;padding:22px 12px;text-align:center;">
-                    <span class="c-ico" style="font-size:2rem;display:block;margin-bottom:10px;">🌐</span>
-                    <span class="c-lbl" style="display:block;font-size:0.68rem;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,0.45);margin-bottom:6px;">GitHub</span>
-                    <span class="c-val" style="display:block;font-size:0.82rem;font-weight:700;color:#a5b4fc;">github.com/Shabdprabhat</span>
-                </div>
-            </div>
-        </div>
+            </td></tr>
+            </table>
+        </td>
 
-        <div style="border-top:1px solid rgba(255,255,255,0.12);padding-top:20px;color:rgba(255,255,255,0.30);font-size:0.8rem;">
-            © 2024 Prabhat &nbsp;·&nbsp; Built with ❤️ for the Odoo Community &nbsp;·&nbsp; LGPL-3
-        </div>
+        <td width="33%" style="padding:0 5px;">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+            <tr><td bgcolor="#ffffff" style="background-color:#ffffff;border-radius:16px;border:1px solid #e2e8f0;padding:35px;">
+                <div style="font-size:40px;margin-bottom:15px;">💼</div>
+                <div style="font-size:20px;font-weight:600;color:#1a202c;margin-bottom:12px;">B2B &amp; Wholesale</div>
+                <div style="font-size:14px;color:#4a5568;">
+                    <div style="margin-bottom:8px;">✓ &nbsp;Contract discounts in currency</div>
+                    <div style="margin-bottom:8px;">✓ &nbsp;Flat ₹200 off per unit</div>
+                    <div style="margin-bottom:8px;">✓ &nbsp;Consistent across order lines</div>
+                    <div style="margin-bottom:8px;">✓ &nbsp;Reduces billing errors to zero</div>
+                </div>
+            </td></tr>
+            </table>
+        </td>
 
+        <td width="33%" style="padding:0 0 0 10px;">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+            <tr><td bgcolor="#ffffff" style="background-color:#ffffff;border-radius:16px;border:1px solid #e2e8f0;padding:35px;">
+                <div style="font-size:40px;margin-bottom:15px;">📊</div>
+                <div style="font-size:20px;font-weight:600;color:#1a202c;margin-bottom:12px;">Sales Teams</div>
+                <div style="font-size:14px;color:#4a5568;">
+                    <div style="margin-bottom:8px;">✓ &nbsp;Think in amounts, not %</div>
+                    <div style="margin-bottom:8px;">✓ &nbsp;Faster order entry</div>
+                    <div style="margin-bottom:8px;">✓ &nbsp;Accurate discounts every time</div>
+                    <div style="margin-bottom:8px;">✓ &nbsp;Clear savings on quotations</div>
+                </div>
+            </td></tr>
+            </table>
+        </td>
+
+    </tr>
+    </table>
+
+</td>
+</tr>
+</table>
+
+
+<!-- ═══════ DEVELOPER FOOTER ═══════ -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:10px;">
+<tr>
+<td bgcolor="#1e3a8a" style="background-color:#1e3a8a;padding:70px 30px;text-align:center;border-radius:20px;">
+
+    <div style="font-size:40px;margin-bottom:16px;">👨‍💻</div>
+
+    <div style="color:#ffffff;font-size:32px;font-weight:700;margin-bottom:8px;">Prabhat</div>
+    <div style="color:#93c5fd;font-size:18px;font-weight:500;margin-bottom:6px;">Odoo Developer</div>
+    <div style="color:#60a5fa;font-size:14px;margin-bottom:30px;">📍 India &nbsp;·&nbsp; Available Worldwide</div>
+
+    <div style="margin-bottom:30px;">
+        <span style="font-size:13px;padding:8px 18px;background-color:rgba(255,255,255,0.1);border-radius:50px;display:inline-block;font-weight:500;color:#bfdbfe;margin:4px;">🔧 Customization</span>
+        <span style="font-size:13px;padding:8px 18px;background-color:rgba(255,255,255,0.1);border-radius:50px;display:inline-block;font-weight:500;color:#bfdbfe;margin:4px;">🔄 Migration</span>
+        <span style="font-size:13px;padding:8px 18px;background-color:rgba(255,255,255,0.1);border-radius:50px;display:inline-block;font-weight:500;color:#bfdbfe;margin:4px;">🧩 Module Development</span>
+        <span style="font-size:13px;padding:8px 18px;background-color:rgba(255,255,255,0.1);border-radius:50px;display:inline-block;font-weight:500;color:#bfdbfe;margin:4px;">🐛 Bug Fixing</span>
+        <span style="font-size:13px;padding:8px 18px;background-color:rgba(255,255,255,0.1);border-radius:50px;display:inline-block;font-weight:500;color:#bfdbfe;margin:4px;">🔗 Integration</span>
     </div>
-</section>
+
+    <div style="margin-bottom:40px;">
+        <span style="display:inline-block;background-color:#065f46;color:#6ee7b7;padding:12px 32px;border-radius:50px;font-size:15px;font-weight:700;border:2px solid #10b981;">
+            🟢 &nbsp;Available for Odoo Projects
+        </span>
+    </div>
+
+    <!-- Contact Cards -->
+    <table cellpadding="0" cellspacing="0" border="0" align="center" style="margin-bottom:40px;">
+    <tr valign="top">
+
+        <td style="padding:0 10px;">
+            <table cellpadding="0" cellspacing="0" border="0">
+            <tr><td bgcolor="#1d4ed8" style="background-color:#1d4ed8;border-radius:16px;border:1px solid #3b82f6;padding:24px 28px;text-align:center;min-width:150px;">
+                <div style="font-size:32px;margin-bottom:10px;">📱</div>
+                <div style="color:#93c5fd;font-size:11px;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">WhatsApp</div>
+                <div style="color:#ffffff;font-size:14px;font-weight:700;">+91 7982425142</div>
+            </td></tr>
+            </table>
+        </td>
+
+        <td style="padding:0 10px;">
+            <table cellpadding="0" cellspacing="0" border="0">
+            <tr><td bgcolor="#1d4ed8" style="background-color:#1d4ed8;border-radius:16px;border:1px solid #3b82f6;padding:24px 28px;text-align:center;min-width:150px;">
+                <div style="font-size:32px;margin-bottom:10px;">✉️</div>
+                <div style="color:#93c5fd;font-size:11px;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Email</div>
+                <div style="color:#ffffff;font-size:14px;font-weight:700;">prabhatshaw24@gmail.com</div>
+            </td></tr>
+            </table>
+        </td>
+
+        <td style="padding:0 10px;">
+            <table cellpadding="0" cellspacing="0" border="0">
+            <tr><td bgcolor="#1d4ed8" style="background-color:#1d4ed8;border-radius:16px;border:1px solid #3b82f6;padding:24px 28px;text-align:center;min-width:150px;">
+                <div style="font-size:32px;margin-bottom:10px;">🌐</div>
+                <div style="color:#93c5fd;font-size:11px;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">GitHub</div>
+                <div style="color:#93c5fd;font-size:14px;font-weight:700;">github.com/Shabdprabhat</div>
+            </td></tr>
+            </table>
+        </td>
+
+    </tr>
+    </table>
+
+    <div style="border-top:1px solid #1d4ed8;padding-top:20px;color:#3b82f6;font-size:13px;">
+        © 2024 Prabhat &nbsp;·&nbsp; Built with ❤️ for the Odoo Community &nbsp;·&nbsp; LGPL-3
+    </div>
+
+</td>
+</tr>
+</table>
 
 
 </body>
