@@ -9,229 +9,75 @@
     <span href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"></span>
 
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            color: #2c3e50;
-        }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a202c; background:#fff; }
 
-        /* ── HERO ── */
-        .hero-section {
-            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
-            color: white;
-            padding: 80px 30px;
-            border-radius: 20px;
-            margin-top: 10px;
-            text-align: center;
-        }
-        .hero-section h1 {
-            font-size: 3rem;
-            font-weight: 800;
-            color: white;
-            line-height: 1.2;
-        }
-        .hero-section p.lead {
-            font-size: 1.2rem;
-            color: rgba(255,255,255,0.92);
-            max-width: 580px;
-            margin: 0 auto;
-        }
-        .hero-badge {
-            display: inline-block;
-            padding: 7px 20px;
-            border-radius: 50px;
-            background: rgba(255,255,255,0.18);
-            border: 1px solid rgba(255,255,255,0.35);
-            font-size: 0.88rem;
-            color: white;
-            font-weight: 600;
-            margin: 4px;
-        }
-        .hero-badge-green { background: #065f46; border-color: #065f46; }
+        .hero-section    { background: linear-gradient(135deg,#6366f1 0%,#8b5cf6 60%,#a855f7 100%); border-radius:20px; margin-top:10px; padding:70px 30px; text-align:center; }
+        .hero-section h1 { font-size:2.6rem; font-weight:900; color:#ffffff; line-height:1.2; white-space:nowrap; }
+        .hero-section .lead { font-size:1.1rem; color:rgba(255,255,255,0.92); max-width:540px; margin:0 auto; }
+        .hero-badge      { display:inline-block; padding:6px 18px; border-radius:50px; background:rgba(255,255,255,0.18); border:1px solid rgba(255,255,255,0.35); font-size:0.85rem; color:#fff; font-weight:600; margin:4px; }
+        .badge-green     { background:#065f46; border-color:#065f46; }
 
-        /* ── OVERVIEW ── */
-        .overview-box {
-            background: #faf5ff;
-            border-left: 6px solid #8b5cf6;
-            border-radius: 10px;
-            padding: 24px 28px;
-        }
-        .overview-box h2 {
-            color: #7c3aed;
-            font-size: 1.4rem;
-            font-weight: 800;
-            margin-bottom: 10px;
-        }
+        .overview-box    { background:#faf5ff; border-left:6px solid #7c3aed; border-radius:10px; padding:24px 28px; }
+        .overview-box h2 { color:#7c3aed; font-size:1.35rem; font-weight:800; margin-bottom:10px; }
 
-        /* ── STEP NUMBERS ── */
-        .step-number {
-            font-size: 4rem;
-            font-weight: 800;
-            opacity: 0.2;
-            line-height: 1;
-        }
-        .step-1 { color: #6366f1; }
-        .step-2 { color: #ec4899; }
-        .step-3 { color: #f97316; }
-        .step-4 { color: #10b981; }
+        .step-number { font-size:3.8rem; font-weight:900; line-height:1; opacity:0.22; }
 
-        /* ── SCREENSHOT ── */
-        .screenshot-wrap {
-            border-radius: 14px;
-            overflow: hidden;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-        }
-        .screenshot-header {
-            padding: 11px 18px;
-            color: white;
-            font-size: 13px;
-            font-weight: 700;
-        }
-        .sh-purple { background: linear-gradient(90deg,#6366f1,#8b5cf6); }
-        .sh-pink   { background: linear-gradient(90deg,#ec4899,#f43f5e); }
-        .screenshot-wrap img { width: 100%; display: block; }
+        .screenshot-wrap { border-radius:14px; overflow:hidden; box-shadow:0 6px 28px rgba(0,0,0,0.13); }
+        .ss-header       { padding:11px 18px; color:#fff; font-size:13px; font-weight:700; }
+        .screenshot-wrap img { width:100%; display:block; }
 
-        /* ── SECTION BACKGROUNDS ── */
-        .bg-features {
-            background: linear-gradient(135deg, #faf5ff 0%, #ede9fe 100%);
-            border-radius: 20px;
-            margin-top: 10px;
-        }
-        .bg-usecases {
-            background: linear-gradient(135deg, #fff1f2 0%, #fce7f3 100%);
-            border-radius: 20px;
-            margin-top: 10px;
-        }
+        .bg-purple-light { background:linear-gradient(135deg,#faf5ff,#ede9fe); border-radius:20px; margin-top:10px; }
+        .bg-pink-light   { background:linear-gradient(135deg,#fff1f2,#fce7f3); border-radius:20px; margin-top:10px; }
 
-        /* ── FEATURE CARDS ── */
-        .feature-icon {
-            width: 56px;
-            height: 56px;
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.6rem;
-            margin-bottom: 16px;
-        }
-        .fi-purple { background: linear-gradient(135deg,#ede9fe,#ddd6fe); }
-        .fi-blue   { background: linear-gradient(135deg,#dbeafe,#bfdbfe); }
-        .fi-green  { background: linear-gradient(135deg,#d1fae5,#a7f3d0); }
-        .fi-pink   { background: linear-gradient(135deg,#fce7f3,#fbcfe8); }
-        .fi-orange { background: linear-gradient(135deg,#ffedd5,#fed7aa); }
-        .fi-teal   { background: linear-gradient(135deg,#ccfbf1,#99f6e4); }
+        .f-icon { width:54px; height:54px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:1.5rem; margin-bottom:14px; }
 
-        /* ── USE CASE CARDS ── */
-        .usecase-card {
-            border-radius: 16px;
-            padding: 28px;
-            height: 100%;
-        }
-        .uc-purple { background: #faf5ff; border: 2px solid #ddd6fe; }
-        .uc-pink   { background: #fff1f2; border: 2px solid #fecdd3; }
-        .uc-blue   { background: #eff6ff; border: 2px solid #bfdbfe; }
-        .usecase-card .uc-icon { font-size: 2.4rem; margin-bottom: 14px; }
-        .usecase-card h4 { font-size: 1.05rem; font-weight: 700; color: #1a202c; margin-bottom: 12px; }
-        .usecase-card li { color: #4a5568; font-size: 0.9rem; margin-bottom: 6px; list-style: none; padding-left: 0; }
-        .usecase-card li::before { content: "✓  "; font-weight: 700; }
-        .li-purple li::before { color: #7c3aed; }
-        .li-pink   li::before { color: #e11d48; }
-        .li-blue   li::before { color: #2563eb; }
+        .uc-card { border-radius:16px; padding:28px; height:100%; }
+        .uc-card h4 { font-size:1rem; font-weight:700; margin-bottom:12px; }
+        .uc-card li { font-size:0.88rem; color:#4a5568; margin-bottom:5px; list-style:none; padding-left:0; }
+        .uc-card li::before { content:"✓  "; font-weight:800; }
 
-        /* ── DEVELOPER / FOOTER ── */
-        .footer-section {
-            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4c1d95 100%);
-            border-radius: 20px;
-            margin-top: 10px;
-            text-align: center;
-            color: white;
-            padding: 60px 30px;
-        }
-        .footer-section h3 { color: white; font-weight: 900; font-size: 2rem; }
-        .footer-section p  { color: rgba(255,255,255,0.65); }
+        /* ── FOOTER ── */
+        .footer-wrap { background:linear-gradient(135deg,#1e1b4b,#312e81,#4c1d95); border-radius:20px; margin-top:10px; padding:60px 20px; text-align:center; }
 
-        .dev-avatar {
-            width: 90px;
-            height: 90px;
-            background: linear-gradient(135deg,#6366f1,#a855f7);
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.6rem;
-            margin-bottom: 20px;
-            border: 4px solid rgba(255,255,255,0.25);
-        }
+        .dev-circle { width:88px; height:88px; background:linear-gradient(135deg,#6366f1,#a855f7); border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:2.5rem; border:4px solid rgba(255,255,255,0.22); margin-bottom:18px; }
 
-        .contact-card {
-            display: inline-block;
-            background: rgba(255,255,255,0.08);
-            border: 1px solid rgba(255,255,255,0.2);
-            border-radius: 16px;
-            padding: 20px 28px;
-            margin: 8px;
-            text-align: center;
-            vertical-align: top;
-            min-width: 160px;
-            transition: background 0.2s;
-        }
-        .contact-card .c-icon  { font-size: 1.8rem; display: block; margin-bottom: 8px; }
-        .contact-card .c-label { display: block; color: rgba(255,255,255,0.45); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
-        .contact-card .c-value { color: white; font-size: 0.92rem; font-weight: 700; }
+        .service-pill { display:inline-block; padding:6px 16px; border-radius:50px; font-size:0.82rem; font-weight:600; margin:4px; border:1px solid; }
 
-        .avail-badge {
-            display: inline-block;
-            background: linear-gradient(135deg,rgba(16,185,129,0.2),rgba(5,150,105,0.2));
-            border: 2px solid #34d399;
-            border-radius: 50px;
-            padding: 12px 30px;
-            color: #6ee7b7;
-            font-size: 0.95rem;
-            font-weight: 700;
-            margin: 10px 0 30px;
-        }
-
-        .skill-badge {
-            display: inline-block;
-            padding: 6px 16px;
-            border-radius: 50px;
-            font-size: 0.82rem;
-            font-weight: 600;
-            margin: 4px;
-        }
-        .sb-purple { background: rgba(139,92,246,0.25); color: #c4b5fd; border: 1px solid rgba(139,92,246,0.4); }
-        .sb-pink   { background: rgba(236,72,153,0.25); color: #f9a8d4; border: 1px solid rgba(236,72,153,0.4); }
-        .sb-blue   { background: rgba(99,102,241,0.25); color: #a5b4fc; border: 1px solid rgba(99,102,241,0.4); }
-        .sb-green  { background: rgba(16,185,129,0.25); color: #6ee7b7; border: 1px solid rgba(16,185,129,0.4); }
-        .sb-orange { background: rgba(249,115,22,0.25); color: #fdba74; border: 1px solid rgba(249,115,22,0.4); }
+        /* contact grid card */
+        .c-card { background:rgba(255,255,255,0.10); border:1px solid rgba(255,255,255,0.22); border-radius:16px; padding:22px 14px; text-align:center; height:100%; }
+        .c-card .c-ico   { font-size:2rem; display:block; margin-bottom:10px; }
+        .c-card .c-lbl   { display:block; font-size:0.68rem; text-transform:uppercase; letter-spacing:1px; color:rgba(255,255,255,0.45); margin-bottom:6px; }
+        .c-card .c-val   { display:block; font-size:0.9rem; font-weight:700; color:#ffffff; word-break:break-word; }
     </style>
 </head>
 <body>
 
-<!-- ══════════════════════════════════
+
+<!-- ════════════════════════
      HERO
-══════════════════════════════════ -->
+════════════════════════ -->
 <section class="hero-section">
     <div class="mb-3">
-        <span style="font-size:0.88rem;padding:8px 22px;background:rgba(255,255,255,0.18);border-radius:50px;display:inline-block;font-weight:600;">
+        <span style="font-size:0.85rem;padding:7px 20px;background:rgba(255,255,255,0.18);border-radius:50px;display:inline-block;font-weight:600;color:#fff;">
             Sale Order Line Fixed Discount &nbsp;·&nbsp; by Prabhat
         </span>
     </div>
-    <h1 class="mb-4">Type the amount.<br/>Odoo does the math.</h1>
+    <h1 class="mb-4">Type the amount. Odoo does the math.</h1>
     <p class="lead mb-4">
         Stop calculating percentages manually. Enter exact discount amounts on every sale order line — the % fills in automatically.
     </p>
     <div>
         <span class="hero-badge">✦ Odoo 18</span>
         <span class="hero-badge">🛒 Sales &amp; Invoicing</span>
-        <span class="hero-badge hero-badge-green">🆓 Free Module</span>
+        <span class="hero-badge badge-green">🆓 Free Module</span>
         <span class="hero-badge">🇮🇳 Made in India</span>
     </div>
 </section>
 
 
-<!-- ══════════════════════════════════
+<!-- ════════════════════════
      OVERVIEW
-══════════════════════════════════ -->
+════════════════════════ -->
 <section class="py-5">
     <div class="container">
         <div class="overview-box">
@@ -239,264 +85,268 @@
             <p style="color:#1a1a1a;font-size:0.97rem;line-height:1.8;margin:0;">
                 Odoo only supports <strong>percentage-based discounts</strong> on sale order lines by default.
                 When a customer asks for <strong style="color:#7c3aed;">"₹500 off"</strong> or <strong style="color:#7c3aed;">"$20 off"</strong>,
-                you have to reverse-calculate the percentage yourself.
-                This module adds a <strong style="color:#7c3aed;">Fixed Discount Amount</strong> field directly on each order line —
-                enter the exact currency amount, and Odoo calculates the discount % automatically.
-                Works on both <strong>Sale Orders</strong> and <strong>Invoices</strong>.
+                you have to reverse-calculate the percentage yourself. This module adds a
+                <strong style="color:#7c3aed;">Fixed Discount Amount</strong> field on each order line —
+                enter the exact amount and Odoo calculates the % automatically.
+                Works on <strong>Sale Orders</strong> and <strong>Invoices</strong>.
             </p>
         </div>
     </div>
 </section>
 
 
-<!-- ══════════════════════════════════
+<!-- ════════════════════════
      HOW IT WORKS
-══════════════════════════════════ -->
+════════════════════════ -->
 <section class="py-5">
     <div class="container">
-        <h2 class="text-center mb-3" style="font-size:2.2rem;font-weight:800;color:#1a202c;">
-            From install to discount in 4 steps
-        </h2>
-        <p class="text-center mb-5" style="font-size:1.05rem;color:#718096;max-width:560px;margin-left:auto;margin-right:auto;">
-            Zero configuration needed — just install and start discounting the right way.
-        </p>
+        <h2 class="text-center mb-2" style="font-size:2rem;font-weight:800;color:#1a202c;">From install to discount in 4 steps</h2>
+        <p class="text-center mb-5" style="color:#718096;max-width:520px;margin-left:auto;margin-right:auto;">Zero configuration — just install and start discounting the right way.</p>
         <div class="row text-center">
             <div class="col-md-3 mb-4">
-                <div class="step-number step-1">01</div>
-                <h4 class="mb-2" style="font-size:1.1rem;font-weight:700;color:#6366f1;">Install the Module</h4>
-                <p style="color:#718096;">Search "Fixed Discount" in the Odoo Apps menu and install in one click.</p>
+                <div class="step-number" style="color:#6366f1;">01</div>
+                <h4 class="mt-2 mb-2" style="font-size:1rem;font-weight:700;color:#6366f1;">Install the Module</h4>
+                <p style="color:#718096;font-size:0.9rem;">Search "Fixed Discount" in the Odoo Apps menu and install in one click.</p>
             </div>
             <div class="col-md-3 mb-4">
-                <div class="step-number step-2">02</div>
-                <h4 class="mb-2" style="font-size:1.1rem;font-weight:700;color:#ec4899;">Open a Sale Order</h4>
-                <p style="color:#718096;">See the new "Discount Amount" column appear on every order line.</p>
+                <div class="step-number" style="color:#ec4899;">02</div>
+                <h4 class="mt-2 mb-2" style="font-size:1rem;font-weight:700;color:#ec4899;">Open a Sale Order</h4>
+                <p style="color:#718096;font-size:0.9rem;">See the new "Discount Amount" column appear on every order line.</p>
             </div>
             <div class="col-md-3 mb-4">
-                <div class="step-number step-3">03</div>
-                <h4 class="mb-2" style="font-size:1.1rem;font-weight:700;color:#f97316;">Enter the Amount</h4>
-                <p style="color:#718096;">Type ₹500 or $20 — the discount % calculates and fills in immediately.</p>
+                <div class="step-number" style="color:#f97316;">03</div>
+                <h4 class="mt-2 mb-2" style="font-size:1rem;font-weight:700;color:#f97316;">Enter the Amount</h4>
+                <p style="color:#718096;font-size:0.9rem;">Type ₹500 or $20 — the discount % calculates and fills in immediately.</p>
             </div>
             <div class="col-md-3 mb-4">
-                <div class="step-number step-4">04</div>
-                <h4 class="mb-2" style="font-size:1.1rem;font-weight:700;color:#10b981;">Confirm &amp; Invoice</h4>
-                <p style="color:#718096;">Confirm the order. Discount flows to the invoice with no re-entry.</p>
+                <div class="step-number" style="color:#10b981;">04</div>
+                <h4 class="mt-2 mb-2" style="font-size:1rem;font-weight:700;color:#10b981;">Confirm &amp; Invoice</h4>
+                <p style="color:#718096;font-size:0.9rem;">Confirm the order. Discount flows to the invoice with no re-entry.</p>
             </div>
         </div>
     </div>
 </section>
 
 
-<!-- ══════════════════════════════════
+<!-- ════════════════════════
      SCREENSHOT 1
-══════════════════════════════════ -->
+════════════════════════ -->
 <section class="py-4">
     <div class="container">
-        <h2 class="text-center mb-2" style="font-size:1.9rem;font-weight:800;color:#1a202c;">Fixed Discount on Sale Order Lines</h2>
+        <h2 class="text-center mb-2" style="font-size:1.8rem;font-weight:800;color:#1a202c;">Fixed Discount on Sale Order Lines</h2>
         <p class="text-center mb-4" style="color:#718096;">New "Discount Amount" column — type the amount, percentage fills automatically.</p>
         <div class="screenshot-wrap">
-            <div class="screenshot-header sh-purple">📋 &nbsp;Sale Order with Discount Amount</div>
+            <div class="ss-header" style="background:linear-gradient(90deg,#6366f1,#8b5cf6);">📋 &nbsp;Sale Order with Discount Amount</div>
             <img src="sale_order_discount_amount.png" alt="Sale Order Fixed Discount" />
         </div>
     </div>
 </section>
 
 
-<!-- ══════════════════════════════════
+<!-- ════════════════════════
      SCREENSHOT 2
-══════════════════════════════════ -->
+════════════════════════ -->
 <section class="py-4">
     <div class="container">
-        <h2 class="text-center mb-2" style="font-size:1.9rem;font-weight:800;color:#1a202c;">Discount Flows to Invoice Automatically</h2>
+        <h2 class="text-center mb-2" style="font-size:1.8rem;font-weight:800;color:#1a202c;">Discount Flows to Invoice Automatically</h2>
         <p class="text-center mb-4" style="color:#718096;">No re-entry needed — discount carries over when you create an invoice.</p>
         <div class="screenshot-wrap">
-            <div class="screenshot-header sh-pink">📄 &nbsp;Invoice with Discount Amount</div>
+            <div class="ss-header" style="background:linear-gradient(90deg,#ec4899,#f43f5e);">📄 &nbsp;Invoice with Discount Amount</div>
             <img src="invoice_discount_amount.png" alt="Invoice Fixed Discount" />
         </div>
     </div>
 </section>
 
 
-<!-- ══════════════════════════════════
+<!-- ════════════════════════
      KEY FEATURES
-══════════════════════════════════ -->
-<section class="py-5 bg-features">
+════════════════════════ -->
+<section class="py-5 bg-purple-light" style="background:linear-gradient(135deg,#faf5ff,#ede9fe);border-radius:20px;margin-top:10px;">
     <div class="container">
-        <h2 class="text-center mb-3" style="font-size:2.2rem;font-weight:800;color:#1a202c;">
-            Everything you need — nothing you don't
-        </h2>
-        <p class="text-center mb-5" style="font-size:1.05rem;color:#718096;max-width:560px;margin-left:auto;margin-right:auto;">
-            One lightweight module. No extra dependencies, no complex configuration.
-        </p>
+        <h2 class="text-center mb-2" style="font-size:2rem;font-weight:800;color:#1a202c;">Everything you need — nothing you don't</h2>
+        <p class="text-center mb-5" style="color:#718096;max-width:520px;margin-left:auto;margin-right:auto;">One lightweight module. No extra dependencies, no complex configuration.</p>
         <div class="row">
+
             <div class="col-md-4 mb-4">
-                <div class="card h-100" style="border-radius:16px;border:2px solid #ddd6fe;">
-                    <div class="card-body" style="padding:32px;">
-                        <div class="feature-icon fi-purple">💲</div>
-                        <h3 class="mb-3" style="font-size:1.15rem;font-weight:700;color:#6d28d9;">Fixed Amount Discount</h3>
-                        <p style="color:#4a5568;">Enter the exact discount in your local currency directly on each sale order line — no formula, no guesswork.</p>
+                <div class="card h-100" style="border-radius:16px;border:2px solid #ddd6fe;background:#fff;">
+                    <div class="card-body" style="padding:28px;">
+                        <div class="f-icon" style="background:linear-gradient(135deg,#ede9fe,#ddd6fe);">💲</div>
+                        <h3 style="font-size:1.05rem;font-weight:700;color:#6d28d9;margin-bottom:8px;">Fixed Amount Discount</h3>
+                        <p style="color:#4a5568;font-size:0.9rem;margin:0;">Enter the exact discount in your local currency on each order line — no formula, no guesswork.</p>
                     </div>
                 </div>
             </div>
+
             <div class="col-md-4 mb-4">
-                <div class="card h-100" style="border-radius:16px;border:2px solid #bfdbfe;">
-                    <div class="card-body" style="padding:32px;">
-                        <div class="feature-icon fi-blue">⚡</div>
-                        <h3 class="mb-3" style="font-size:1.15rem;font-weight:700;color:#1d4ed8;">Auto % Calculation</h3>
-                        <p style="color:#4a5568;">The standard Odoo discount % field updates automatically as you type. Both fields always stay in sync.</p>
+                <div class="card h-100" style="border-radius:16px;border:2px solid #bfdbfe;background:#fff;">
+                    <div class="card-body" style="padding:28px;">
+                        <div class="f-icon" style="background:linear-gradient(135deg,#dbeafe,#bfdbfe);">⚡</div>
+                        <h3 style="font-size:1.05rem;font-weight:700;color:#1d4ed8;margin-bottom:8px;">Auto % Calculation</h3>
+                        <p style="color:#4a5568;font-size:0.9rem;margin:0;">The standard Odoo discount % field updates automatically as you type. Always in sync.</p>
                     </div>
                 </div>
             </div>
+
             <div class="col-md-4 mb-4">
-                <div class="card h-100" style="border-radius:16px;border:2px solid #a7f3d0;">
-                    <div class="card-body" style="padding:32px;">
-                        <div class="feature-icon fi-green">📋</div>
-                        <h3 class="mb-3" style="font-size:1.15rem;font-weight:700;color:#065f46;">Invoice Integration</h3>
-                        <p style="color:#4a5568;">Discount amounts are preserved and flow seamlessly into invoices created from confirmed sale orders.</p>
+                <div class="card h-100" style="border-radius:16px;border:2px solid #a7f3d0;background:#fff;">
+                    <div class="card-body" style="padding:28px;">
+                        <div class="f-icon" style="background:linear-gradient(135deg,#d1fae5,#a7f3d0);">📋</div>
+                        <h3 style="font-size:1.05rem;font-weight:700;color:#065f46;margin-bottom:8px;">Invoice Integration</h3>
+                        <p style="color:#4a5568;font-size:0.9rem;margin:0;">Discount amounts flow seamlessly into invoices created from confirmed sale orders.</p>
                     </div>
                 </div>
             </div>
+
             <div class="col-md-4 mb-4">
-                <div class="card h-100" style="border-radius:16px;border:2px solid #fbcfe8;">
-                    <div class="card-body" style="padding:32px;">
-                        <div class="feature-icon fi-pink">🔧</div>
-                        <h3 class="mb-3" style="font-size:1.15rem;font-weight:700;color:#9d174d;">Zero Configuration</h3>
-                        <p style="color:#4a5568;">Install and start using immediately. No settings to configure, no extra modules required.</p>
+                <div class="card h-100" style="border-radius:16px;border:2px solid #fbcfe8;background:#fff;">
+                    <div class="card-body" style="padding:28px;">
+                        <div class="f-icon" style="background:linear-gradient(135deg,#fce7f3,#fbcfe8);">🔧</div>
+                        <h3 style="font-size:1.05rem;font-weight:700;color:#9d174d;margin-bottom:8px;">Zero Configuration</h3>
+                        <p style="color:#4a5568;font-size:0.9rem;margin:0;">Install and start using immediately. No settings, no extra modules required.</p>
                     </div>
                 </div>
             </div>
+
             <div class="col-md-4 mb-4">
-                <div class="card h-100" style="border-radius:16px;border:2px solid #fed7aa;">
-                    <div class="card-body" style="padding:32px;">
-                        <div class="feature-icon fi-orange">🔄</div>
-                        <h3 class="mb-3" style="font-size:1.15rem;font-weight:700;color:#c2410c;">Two-Way Sync</h3>
-                        <p style="color:#4a5568;">Change the % and the amount updates too. Change the amount and % updates. Works both ways.</p>
+                <div class="card h-100" style="border-radius:16px;border:2px solid #fed7aa;background:#fff;">
+                    <div class="card-body" style="padding:28px;">
+                        <div class="f-icon" style="background:linear-gradient(135deg,#ffedd5,#fed7aa);">🔄</div>
+                        <h3 style="font-size:1.05rem;font-weight:700;color:#c2410c;margin-bottom:8px;">Two-Way Sync</h3>
+                        <p style="color:#4a5568;font-size:0.9rem;margin:0;">Change the % and amount updates. Change amount and % updates. Works both ways.</p>
                     </div>
                 </div>
             </div>
+
             <div class="col-md-4 mb-4">
-                <div class="card h-100" style="border-radius:16px;border:2px solid #99f6e4;">
-                    <div class="card-body" style="padding:32px;">
-                        <div class="feature-icon fi-teal">🧾</div>
-                        <h3 class="mb-3" style="font-size:1.15rem;font-weight:700;color:#0f766e;">PDF Quotations</h3>
-                        <p style="color:#4a5568;">Discount amounts show clearly on printed quotations — customers see exact savings on every line.</p>
+                <div class="card h-100" style="border-radius:16px;border:2px solid #99f6e4;background:#fff;">
+                    <div class="card-body" style="padding:28px;">
+                        <div class="f-icon" style="background:linear-gradient(135deg,#ccfbf1,#99f6e4);">🧾</div>
+                        <h3 style="font-size:1.05rem;font-weight:700;color:#0f766e;margin-bottom:8px;">PDF Quotations</h3>
+                        <p style="color:#4a5568;font-size:0.9rem;margin:0;">Discount amounts show clearly on printed quotations — customers see exact savings.</p>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </section>
 
 
-<!-- ══════════════════════════════════
+<!-- ════════════════════════
      PERFECT FOR
-══════════════════════════════════ -->
-<section class="py-5 bg-usecases">
+════════════════════════ -->
+<section class="py-5 bg-pink-light" style="background:linear-gradient(135deg,#fff1f2,#fce7f3);border-radius:20px;margin-top:10px;">
     <div class="container">
-        <h2 class="text-center mb-3" style="font-size:2.2rem;font-weight:800;color:#1a202c;">
-            Perfect for every sales scenario
-        </h2>
-        <p class="text-center mb-5" style="font-size:1.05rem;color:#718096;">
-            Any team that gives discounts in currency terms will love this module.
-        </p>
+        <h2 class="text-center mb-2" style="font-size:2rem;font-weight:800;color:#1a202c;">Perfect for every sales scenario</h2>
+        <p class="text-center mb-5" style="color:#718096;">Any team that gives discounts in currency terms will love this.</p>
         <div class="row">
+
             <div class="col-md-4 mb-4">
-                <div class="usecase-card uc-purple li-purple">
-                    <div class="uc-icon">🤝</div>
-                    <h4>Negotiated Deals</h4>
+                <div class="uc-card" style="background:#faf5ff;border:2px solid #ddd6fe;">
+                    <div style="font-size:2.2rem;margin-bottom:12px;">🤝</div>
+                    <h4 style="color:#6d28d9;">Negotiated Deals</h4>
                     <ul style="padding:0;margin:0;">
-                        <li>Customer says "₹500 off this order"</li>
-                        <li>Just type 500 — done instantly</li>
-                        <li>No percentage calculation needed</li>
-                        <li>Works per line or per product</li>
+                        <li style="color:#4a5568;">Customer says "₹500 off this order"</li>
+                        <li style="color:#4a5568;">Just type 500 — done instantly</li>
+                        <li style="color:#4a5568;">No percentage calculation needed</li>
+                        <li style="color:#4a5568;">Works per line or per product</li>
                     </ul>
                 </div>
             </div>
+
             <div class="col-md-4 mb-4">
-                <div class="usecase-card uc-pink li-pink">
-                    <div class="uc-icon">💼</div>
-                    <h4>B2B &amp; Wholesale</h4>
+                <div class="uc-card" style="background:#fff1f2;border:2px solid #fecdd3;">
+                    <div style="font-size:2.2rem;margin-bottom:12px;">💼</div>
+                    <h4 style="color:#be123c;">B2B &amp; Wholesale</h4>
                     <ul style="padding:0;margin:0;">
-                        <li>Contract discounts in currency terms</li>
-                        <li>Flat ₹200 off per unit on bulk orders</li>
-                        <li>Consistent across all order lines</li>
-                        <li>Reduces billing errors to zero</li>
+                        <li style="color:#4a5568;">Contract discounts in currency terms</li>
+                        <li style="color:#4a5568;">Flat ₹200 off per unit on bulk orders</li>
+                        <li style="color:#4a5568;">Consistent across all order lines</li>
+                        <li style="color:#4a5568;">Reduces billing errors to zero</li>
                     </ul>
                 </div>
             </div>
+
             <div class="col-md-4 mb-4">
-                <div class="usecase-card uc-blue li-blue">
-                    <div class="uc-icon">📊</div>
-                    <h4>Sales Teams</h4>
+                <div class="uc-card" style="background:#eff6ff;border:2px solid #bfdbfe;">
+                    <div style="font-size:2.2rem;margin-bottom:12px;">📊</div>
+                    <h4 style="color:#1d4ed8;">Sales Teams</h4>
                     <ul style="padding:0;margin:0;">
-                        <li>Reps think in amounts not percentages</li>
-                        <li>Faster order entry, less mental math</li>
-                        <li>Accurate discounts every time</li>
-                        <li>Clear savings on customer quotations</li>
+                        <li style="color:#4a5568;">Reps think in amounts not percentages</li>
+                        <li style="color:#4a5568;">Faster order entry, less mental math</li>
+                        <li style="color:#4a5568;">Accurate discounts every time</li>
+                        <li style="color:#4a5568;">Clear savings on PDF quotations</li>
                     </ul>
                 </div>
             </div>
+
         </div>
     </div>
 </section>
 
 
-<!-- ══════════════════════════════════
-     DEVELOPER — FOOTER
-══════════════════════════════════ -->
-<section class="footer-section">
+<!-- ════════════════════════
+     DEVELOPER FOOTER
+════════════════════════ -->
+<section class="footer-wrap" style="background:linear-gradient(135deg,#1e1b4b,#312e81,#4c1d95);border-radius:20px;margin-top:10px;padding:60px 20px;text-align:center;">
     <div class="container">
 
-        <!-- Avatar + Name -->
-        <div class="dev-avatar">👨‍💻</div>
-        <h3 class="mb-1">Prabhat</h3>
-        <p class="mb-1" style="font-size:1.05rem;color:rgba(255,255,255,0.75);">Odoo Developer</p>
-        <p class="mb-4" style="font-size:0.88rem;color:rgba(255,255,255,0.45);">📍 India &nbsp;·&nbsp; Available Worldwide</p>
+        <!-- Avatar -->
+        <div class="dev-circle" style="width:88px;height:88px;background:linear-gradient(135deg,#6366f1,#a855f7);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:2.5rem;border:4px solid rgba(255,255,255,0.22);margin-bottom:18px;">👨‍💻</div>
 
-        <!-- Services -->
+        <!-- Name & title -->
+        <h3 style="color:#ffffff;font-size:1.9rem;font-weight:900;margin:0 0 6px;">Prabhat</h3>
+        <p style="color:rgba(255,255,255,0.70);font-size:1rem;margin:0 0 4px;">Odoo Developer</p>
+        <p style="color:rgba(255,255,255,0.40);font-size:0.85rem;margin:0 0 28px;">📍 India &nbsp;·&nbsp; Available Worldwide</p>
+
+        <!-- Services pills -->
         <div class="mb-4">
-            <span class="skill-badge sb-purple">🔧 Customization</span>
-            <span class="skill-badge sb-blue">🔄 Migration</span>
-            <span class="skill-badge sb-pink">🧩 Module Development</span>
-            <span class="skill-badge sb-green">🐛 Bug Fixing</span>
-            <span class="skill-badge sb-orange">🔗 Integration</span>
+            <span class="service-pill" style="background:rgba(139,92,246,0.25);color:#c4b5fd;border-color:rgba(139,92,246,0.45);">🔧 Customization</span>
+            <span class="service-pill" style="background:rgba(99,102,241,0.25);color:#a5b4fc;border-color:rgba(99,102,241,0.45);">🔄 Migration</span>
+            <span class="service-pill" style="background:rgba(236,72,153,0.25);color:#f9a8d4;border-color:rgba(236,72,153,0.45);">🧩 Module Development</span>
+            <span class="service-pill" style="background:rgba(16,185,129,0.25);color:#6ee7b7;border-color:rgba(16,185,129,0.45);">🐛 Bug Fixing</span>
+            <span class="service-pill" style="background:rgba(249,115,22,0.25);color:#fdba74;border-color:rgba(249,115,22,0.45);">🔗 Integration</span>
         </div>
 
         <!-- Availability -->
         <div class="mb-5">
-            <div class="avail-badge">🟢 &nbsp;Available for Odoo Projects</div>
+            <span style="display:inline-block;background:rgba(16,185,129,0.18);border:2px solid #34d399;border-radius:50px;padding:10px 28px;color:#6ee7b7;font-size:0.92rem;font-weight:700;">
+                🟢 &nbsp;Available for Odoo Projects
+            </span>
         </div>
 
-        <!-- Contact cards — centered row -->
+        <!-- Contact cards — Bootstrap grid centered -->
         <div class="row justify-content-center mb-5">
-            <div class="col-md-3 col-sm-6 mb-3">
-                <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:16px;padding:24px 16px;text-align:center;">
-                    <div style="font-size:2rem;margin-bottom:10px;">📱</div>
-                    <div style="color:rgba(255,255,255,0.45);font-size:0.7rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">WhatsApp</div>
-                    <div style="color:#ffffff;font-size:0.95rem;font-weight:700;">+91 7982425142</div>
+            <div class="col-md-3 col-sm-4 col-6 mb-3">
+                <div class="c-card" style="background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.22);border-radius:16px;padding:22px 12px;text-align:center;">
+                    <span class="c-ico" style="font-size:2rem;display:block;margin-bottom:10px;">📱</span>
+                    <span class="c-lbl" style="display:block;font-size:0.68rem;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,0.45);margin-bottom:6px;">WhatsApp</span>
+                    <span class="c-val" style="display:block;font-size:0.88rem;font-weight:700;color:#ffffff;">+91 7982425142</span>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 mb-3">
-                <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:16px;padding:24px 16px;text-align:center;">
-                    <div style="font-size:2rem;margin-bottom:10px;">✉️</div>
-                    <div style="color:rgba(255,255,255,0.45);font-size:0.7rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">Email</div>
-                    <div style="color:#ffffff;font-size:0.9rem;font-weight:700;">prabhatshaw24@gmail.com</div>
+            <div class="col-md-3 col-sm-4 col-6 mb-3">
+                <div class="c-card" style="background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.22);border-radius:16px;padding:22px 12px;text-align:center;">
+                    <span class="c-ico" style="font-size:2rem;display:block;margin-bottom:10px;">✉️</span>
+                    <span class="c-lbl" style="display:block;font-size:0.68rem;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,0.45);margin-bottom:6px;">Email</span>
+                    <span class="c-val" style="display:block;font-size:0.82rem;font-weight:700;color:#ffffff;">prabhatshaw24@gmail.com</span>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 mb-3">
-                <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:16px;padding:24px 16px;text-align:center;">
-                    <div style="font-size:2rem;margin-bottom:10px;">🌐</div>
-                    <div style="color:rgba(255,255,255,0.45);font-size:0.7rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">GitHub</div>
-                    <div style="color:#a5b4fc;font-size:0.9rem;font-weight:700;">github.com/Shabdprabhat</div>
+            <div class="col-md-3 col-sm-4 col-6 mb-3">
+                <div class="c-card" style="background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.22);border-radius:16px;padding:22px 12px;text-align:center;">
+                    <span class="c-ico" style="font-size:2rem;display:block;margin-bottom:10px;">🌐</span>
+                    <span class="c-lbl" style="display:block;font-size:0.68rem;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,0.45);margin-bottom:6px;">GitHub</span>
+                    <span class="c-val" style="display:block;font-size:0.82rem;font-weight:700;color:#a5b4fc;">github.com/Shabdprabhat</span>
                 </div>
             </div>
         </div>
 
-        <div style="border-top:1px solid rgba(255,255,255,0.12);padding-top:20px;color:rgba(255,255,255,0.3);font-size:0.82rem;">
+        <div style="border-top:1px solid rgba(255,255,255,0.12);padding-top:20px;color:rgba(255,255,255,0.30);font-size:0.8rem;">
             © 2024 Prabhat &nbsp;·&nbsp; Built with ❤️ for the Odoo Community &nbsp;·&nbsp; LGPL-3
         </div>
 
     </div>
 </section>
+
 
 </body>
 </html>
