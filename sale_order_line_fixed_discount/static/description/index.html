@@ -16,14 +16,31 @@
         }
         
         .header-banner {
-            background: linear-gradient(135deg, #875A7B, #5c3d6e) !important;
+            background-image: url('banner.png') !important;
+            background-size: cover !important;
+            background-position: center !important;
             color: white !important;
-            padding: 50px 40px !important;
+            padding: 80px 40px !important;
             text-align: center !important;
             border-radius: 8px !important;
             margin-bottom: 40px !important;
             border: none !important;
             box-shadow: none !important;
+            position: relative !important;
+        }
+        .header-banner::before {
+            content: '' !important;
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            background: rgba(135, 90, 123, 0.7) !important;
+            border-radius: 8px !important;
+        }
+        .header-banner h1, .header-banner p, .header-banner .badge {
+            position: relative !important;
+            z-index: 1 !important;
         }
         
         .header-banner h1 { 
