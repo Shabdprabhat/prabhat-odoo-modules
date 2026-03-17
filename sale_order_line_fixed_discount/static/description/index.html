@@ -2,345 +2,223 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sale Order Line Fixed Discount - Odoo 18</title>
+    <title>Sale Order Line Fixed Discount</title>
 </head>
-<body style="margin:0; padding:0; background:#f4f5f7; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif; color:#2d3748;">
+<body style="margin:0;padding:0;font-family:Arial,Helvetica,sans-serif;background:#f0fdfa;color:#111111;">
 
-<!-- ═══════════════════════════════════════════════
-     HERO BANNER
-═══════════════════════════════════════════════ -->
-<div style="background:linear-gradient(135deg,#875A7B 0%,#6b3f6b 50%,#3d1f4e 100%); padding:60px 40px 50px; text-align:center; position:relative; overflow:hidden;">
 
-    <!-- decorative circles -->
-    <div style="position:absolute; top:-60px; left:-60px; width:200px; height:200px; background:rgba(255,255,255,0.05); border-radius:50%;"></div>
-    <div style="position:absolute; bottom:-80px; right:-40px; width:260px; height:260px; background:rgba(255,255,255,0.04); border-radius:50%;"></div>
-    <div style="position:absolute; top:20px; right:80px; width:80px; height:80px; background:rgba(255,255,255,0.06); border-radius:50%;"></div>
-
-    <!-- icon badge -->
-    <div style="display:inline-block; background:rgba(255,255,255,0.15); border:2px solid rgba(255,255,255,0.3); border-radius:16px; padding:14px 20px; margin-bottom:24px;">
-        <span style="font-size:36px; line-height:1;">💰</span>
-    </div>
-
-    <h1 style="color:#ffffff; font-size:38px; font-weight:800; margin:0 0 14px; letter-spacing:-0.5px; text-shadow:0 2px 8px rgba(0,0,0,0.2);">
-        Sale Order Line Fixed Discount
-    </h1>
-    <p style="color:rgba(255,255,255,0.88); font-size:18px; margin:0 0 30px; max-width:580px; display:inline-block; line-height:1.6;">
-        Give customers exact currency discounts on every order line — no more percentage guessing.
+<!-- HERO -->
+<div style="background:#0f766e;padding:50px 30px;text-align:center;">
+    <div style="background:rgba(255,255,255,0.18);display:inline-block;border-radius:50%;width:72px;height:72px;line-height:72px;font-size:36px;margin-bottom:20px;">💰</div>
+    <h1 style="color:#ffffff;font-size:36px;font-weight:900;margin:0 0 14px 0;letter-spacing:-0.5px;">Sale Order Line Fixed Discount</h1>
+    <p style="color:rgba(255,255,255,0.92);font-size:17px;margin:0 auto 28px auto;max-width:500px;line-height:1.7;font-weight:500;">
+        Apply exact currency discounts on sale order lines — no percentage calculation needed.
     </p>
-
-    <!-- badge row -->
-    <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:10px; margin-bottom:10px;">
-        <span style="background:rgba(255,255,255,0.2); border:1px solid rgba(255,255,255,0.35); color:#fff; padding:6px 18px; border-radius:30px; font-size:13px; font-weight:600; letter-spacing:0.3px;">✦ Odoo 18</span>
-        <span style="background:rgba(255,255,255,0.2); border:1px solid rgba(255,255,255,0.35); color:#fff; padding:6px 18px; border-radius:30px; font-size:13px; font-weight:600; letter-spacing:0.3px;">🛒 Sales &amp; Invoicing</span>
-        <span style="background:#16a34a; border:1px solid rgba(255,255,255,0.2); color:#fff; padding:6px 18px; border-radius:30px; font-size:13px; font-weight:600; letter-spacing:0.3px;">🆓 Free Module</span>
-        <span style="background:rgba(255,255,255,0.2); border:1px solid rgba(255,255,255,0.35); color:#fff; padding:6px 18px; border-radius:30px; font-size:13px; font-weight:600; letter-spacing:0.3px;">🇮🇳 Made in India</span>
+    <div>
+        <span style="background:rgba(255,255,255,0.22);color:#ffffff;padding:6px 18px;border-radius:20px;font-size:13px;font-weight:700;margin:4px;display:inline-block;">Odoo 18</span>
+        <span style="background:rgba(255,255,255,0.22);color:#ffffff;padding:6px 18px;border-radius:20px;font-size:13px;font-weight:700;margin:4px;display:inline-block;">Sales &amp; Invoicing</span>
+        <span style="background:#065f46;color:#ffffff;padding:6px 18px;border-radius:20px;font-size:13px;font-weight:700;margin:4px;display:inline-block;">Free</span>
     </div>
 </div>
 
-<!-- ═══════════════════════════════════════════════
-     PROBLEM → SOLUTION STRIP
-═══════════════════════════════════════════════ -->
-<div style="background:#fff; padding:32px 40px; border-bottom:1px solid #e2e8f0;">
-    <div style="max-width:900px; margin:0 auto; display:flex; align-items:center; gap:20px; flex-wrap:wrap; justify-content:center;">
 
-        <!-- Problem -->
-        <div style="flex:1; min-width:240px; background:#fff5f5; border:1px solid #feb2b2; border-radius:12px; padding:20px 24px; text-align:center;">
-            <div style="font-size:28px; margin-bottom:8px;">😤</div>
-            <div style="font-weight:700; color:#c53030; font-size:15px; margin-bottom:6px;">The Problem</div>
-            <div style="color:#742a2a; font-size:14px; line-height:1.5;">
-                Odoo only supports <strong>percentage discounts</strong> by default. You have to calculate the percentage yourself when a customer wants "₹500 off".
-            </div>
+<!-- OVERVIEW -->
+<div style="background:#ccfbf1;border-left:6px solid #0f766e;padding:26px 30px;margin:30px;">
+    <h2 style="color:#0f766e;font-size:22px;font-weight:900;margin:0 0 12px 0;">What This Module Does</h2>
+    <p style="font-size:15px;line-height:1.8;margin:0;color:#1a1a1a;">
+        Odoo only allows <strong>percentage-based discounts</strong> on sale order lines by default.
+        This module adds a <strong style="color:#0f766e;">Fixed Discount Amount</strong> field — enter the exact
+        discount in your currency (e.g. <strong>₹500</strong> or <strong>$20</strong>) and the percentage
+        is calculated automatically. Works on both <strong>Sale Orders</strong> and <strong>Invoices</strong>.
+    </p>
+</div>
+
+
+<!-- SCREENSHOT 1 -->
+<div style="padding:10px 30px 30px 30px;">
+    <h2 style="color:#111111;font-size:22px;font-weight:900;margin:0 0 6px 0;text-align:center;">Fixed Discount on Sale Order Lines</h2>
+    <p style="color:#555555;font-size:14px;text-align:center;margin:0 0 16px 0;font-weight:500;">New "Discount Amount" column — type an amount, percentage fills automatically.</p>
+    <div style="border:3px solid #0f766e;border-radius:10px;overflow:hidden;box-shadow:0 4px 18px rgba(15,118,110,0.20);">
+        <div style="background:#0f766e;padding:10px 18px;">
+            <span style="color:#ffffff;font-size:14px;font-weight:700;">Sale Order with Discount Amount</span>
         </div>
-
-        <!-- Arrow -->
-        <div style="font-size:30px; color:#875A7B; font-weight:bold; flex-shrink:0;">→</div>
-
-        <!-- Solution -->
-        <div style="flex:1; min-width:240px; background:#f0fdf4; border:1px solid #86efac; border-radius:12px; padding:20px 24px; text-align:center;">
-            <div style="font-size:28px; margin-bottom:8px;">🎉</div>
-            <div style="font-weight:700; color:#15803d; font-size:15px; margin-bottom:6px;">The Solution</div>
-            <div style="color:#14532d; font-size:14px; line-height:1.5;">
-                This module adds a <strong>Fixed Discount Amount</strong> field. Type the exact amount — Odoo calculates the percentage automatically.
-            </div>
-        </div>
+        <img src="sale_order_discount_amount.png" alt="Sale Order Fixed Discount" style="width:100%;display:block;" />
     </div>
 </div>
 
-<!-- ═══════════════════════════════════════════════
-     SCREENSHOTS — SALE ORDER
-═══════════════════════════════════════════════ -->
-<div style="padding:50px 40px 20px; max-width:960px; margin:0 auto;">
-    <div style="text-align:center; margin-bottom:32px;">
-        <div style="display:inline-block; background:#875A7B; color:#fff; padding:4px 14px; border-radius:20px; font-size:12px; font-weight:600; letter-spacing:1px; margin-bottom:10px; text-transform:uppercase;">Live Screenshot</div>
-        <h2 style="color:#1a202c; font-size:28px; font-weight:700; margin:0 0 10px;">Fixed Discount on Sale Order Lines</h2>
-        <p style="color:#718096; font-size:15px; margin:0;">Enter an exact amount — the percentage column updates automatically in real time.</p>
-    </div>
-    <div style="background:#fff; border-radius:16px; padding:8px; box-shadow:0 4px 24px rgba(0,0,0,0.10); border:1px solid #e2e8f0;">
-        <img src="sale_order_discount_amount.png" alt="Sale Order Line Fixed Discount Screenshot" style="width:100%; border-radius:10px; display:block;" />
-    </div>
-</div>
 
-<!-- ═══════════════════════════════════════════════
-     SCREENSHOTS — INVOICE
-═══════════════════════════════════════════════ -->
-<div style="padding:30px 40px 50px; max-width:960px; margin:0 auto;">
-    <div style="text-align:center; margin-bottom:32px;">
-        <div style="display:inline-block; background:#0284c7; color:#fff; padding:4px 14px; border-radius:20px; font-size:12px; font-weight:600; letter-spacing:1px; margin-bottom:10px; text-transform:uppercase;">Live Screenshot</div>
-        <h2 style="color:#1a202c; font-size:28px; font-weight:700; margin:0 0 10px;">Discount Flows to the Invoice Too</h2>
-        <p style="color:#718096; font-size:15px; margin:0;">The fixed discount amount is carried over when you create an invoice from the sale order.</p>
-    </div>
-    <div style="background:#fff; border-radius:16px; padding:8px; box-shadow:0 4px 24px rgba(0,0,0,0.10); border:1px solid #e2e8f0;">
-        <img src="invoice_discount_amount.png" alt="Invoice Discount Amount Screenshot" style="width:100%; border-radius:10px; display:block;" />
+<!-- SCREENSHOT 2 -->
+<div style="padding:0 30px 30px 30px;">
+    <h2 style="color:#111111;font-size:22px;font-weight:900;margin:0 0 6px 0;text-align:center;">Discount Flows to Invoice Automatically</h2>
+    <p style="color:#555555;font-size:14px;text-align:center;margin:0 0 16px 0;font-weight:500;">No re-entry needed — discount amounts carry over when you create an invoice.</p>
+    <div style="border:3px solid #0369a1;border-radius:10px;overflow:hidden;box-shadow:0 4px 18px rgba(3,105,161,0.20);">
+        <div style="background:#0369a1;padding:10px 18px;">
+            <span style="color:#ffffff;font-size:14px;font-weight:700;">Invoice with Discount Amount</span>
+        </div>
+        <img src="invoice_discount_amount.png" alt="Invoice Fixed Discount" style="width:100%;display:block;" />
     </div>
 </div>
 
-<!-- ═══════════════════════════════════════════════
-     KEY FEATURES — 4 CARDS
-═══════════════════════════════════════════════ -->
-<div style="background:#fff; padding:50px 40px;">
-    <div style="max-width:960px; margin:0 auto;">
-        <div style="text-align:center; margin-bottom:36px;">
-            <h2 style="color:#1a202c; font-size:28px; font-weight:700; margin:0 0 10px;">What You Get</h2>
-            <p style="color:#718096; font-size:15px; margin:0;">Everything packed into one lightweight module — no dependencies, no config needed.</p>
-        </div>
 
-        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px;">
+<!-- KEY FEATURES -->
+<div style="background:#134e4a;padding:30px;">
+    <h2 style="color:#ffffff;font-size:24px;font-weight:900;text-align:center;margin:0 0 24px 0;">Key Features</h2>
 
-            <!-- Card 1 -->
-            <div style="border-radius:14px; padding:28px 22px; text-align:center; background:linear-gradient(160deg,#fdf4ff,#f3e8ff); border:1px solid #e9d5ff;">
-                <div style="width:56px; height:56px; background:linear-gradient(135deg,#875A7B,#6b3f6b); border-radius:14px; display:flex; align-items:center; justify-content:center; margin:0 auto 16px; font-size:26px; line-height:56px; text-align:center;">💲</div>
-                <div style="font-size:16px; font-weight:700; color:#1a202c; margin-bottom:8px;">Fixed Amount Discount</div>
-                <div style="font-size:13px; color:#6b7280; line-height:1.6;">Enter the exact discount in your local currency — no mental math required.</div>
-            </div>
-
-            <!-- Card 2 -->
-            <div style="border-radius:14px; padding:28px 22px; text-align:center; background:linear-gradient(160deg,#eff6ff,#dbeafe); border:1px solid #bfdbfe;">
-                <div style="width:56px; height:56px; background:linear-gradient(135deg,#0284c7,#0369a1); border-radius:14px; display:flex; align-items:center; justify-content:center; margin:0 auto 16px; font-size:26px; line-height:56px; text-align:center;">⚡</div>
-                <div style="font-size:16px; font-weight:700; color:#1a202c; margin-bottom:8px;">Auto % Calculation</div>
-                <div style="font-size:13px; color:#6b7280; line-height:1.6;">The discount percentage updates automatically as soon as you type an amount.</div>
-            </div>
-
-            <!-- Card 3 -->
-            <div style="border-radius:14px; padding:28px 22px; text-align:center; background:linear-gradient(160deg,#f0fdf4,#dcfce7); border:1px solid #bbf7d0;">
-                <div style="width:56px; height:56px; background:linear-gradient(135deg,#16a34a,#15803d); border-radius:14px; display:flex; align-items:center; justify-content:center; margin:0 auto 16px; font-size:26px; line-height:56px; text-align:center;">📋</div>
-                <div style="font-size:16px; font-weight:700; color:#1a202c; margin-bottom:8px;">Invoice Sync</div>
-                <div style="font-size:13px; color:#6b7280; line-height:1.6;">Discount amounts carry over seamlessly when you create invoices from sale orders.</div>
-            </div>
-
-            <!-- Card 4 -->
-            <div style="border-radius:14px; padding:28px 22px; text-align:center; background:linear-gradient(160deg,#fffbeb,#fef3c7); border:1px solid #fde68a;">
-                <div style="width:56px; height:56px; background:linear-gradient(135deg,#d97706,#b45309); border-radius:14px; display:flex; align-items:center; justify-content:center; margin:0 auto 16px; font-size:26px; line-height:56px; text-align:center;">🔧</div>
-                <div style="font-size:16px; font-weight:700; color:#1a202c; margin-bottom:8px;">Zero Config</div>
-                <div style="font-size:13px; color:#6b7280; line-height:1.6;">Just install and it works. No extra settings, no dependencies, no technical setup.</div>
-            </div>
-
+    <div style="background:rgba(255,255,255,0.10);border-radius:10px;padding:20px 22px;margin-bottom:12px;border-left:5px solid #2dd4bf;">
+        <div style="font-size:24px;display:inline-block;vertical-align:middle;margin-right:14px;">💲</div>
+        <div style="display:inline-block;vertical-align:middle;width:calc(100% - 52px);">
+            <div style="font-weight:800;color:#ffffff;font-size:16px;margin-bottom:4px;">Fixed Amount Discount Field</div>
+            <div style="color:rgba(255,255,255,0.75);font-size:14px;line-height:1.6;">Enter the exact discount in your local currency directly on each order line.</div>
         </div>
     </div>
+
+    <div style="background:rgba(255,255,255,0.10);border-radius:10px;padding:20px 22px;margin-bottom:12px;border-left:5px solid #38bdf8;">
+        <div style="font-size:24px;display:inline-block;vertical-align:middle;margin-right:14px;">⚡</div>
+        <div style="display:inline-block;vertical-align:middle;width:calc(100% - 52px);">
+            <div style="font-weight:800;color:#ffffff;font-size:16px;margin-bottom:4px;">Auto Percentage Calculation</div>
+            <div style="color:rgba(255,255,255,0.75);font-size:14px;line-height:1.6;">The standard discount % field updates automatically — no manual calculation needed.</div>
+        </div>
+    </div>
+
+    <div style="background:rgba(255,255,255,0.10);border-radius:10px;padding:20px 22px;margin-bottom:12px;border-left:5px solid #86efac;">
+        <div style="font-size:24px;display:inline-block;vertical-align:middle;margin-right:14px;">📋</div>
+        <div style="display:inline-block;vertical-align:middle;width:calc(100% - 52px);">
+            <div style="font-weight:800;color:#ffffff;font-size:16px;margin-bottom:4px;">Invoice Integration</div>
+            <div style="color:rgba(255,255,255,0.75);font-size:14px;line-height:1.6;">Discount amounts are preserved and flow into invoices created from sale orders.</div>
+        </div>
+    </div>
+
+    <div style="background:rgba(255,255,255,0.10);border-radius:10px;padding:20px 22px;border-left:5px solid #c4b5fd;">
+        <div style="font-size:24px;display:inline-block;vertical-align:middle;margin-right:14px;">🔧</div>
+        <div style="display:inline-block;vertical-align:middle;width:calc(100% - 52px);">
+            <div style="font-weight:800;color:#ffffff;font-size:16px;margin-bottom:4px;">Zero Configuration</div>
+            <div style="color:rgba(255,255,255,0.75);font-size:14px;line-height:1.6;">Install and start using immediately. No settings, no extra modules required.</div>
+        </div>
+    </div>
+
 </div>
 
-<!-- ═══════════════════════════════════════════════
-     HOW IT WORKS — STEPS
-═══════════════════════════════════════════════ -->
-<div style="background:linear-gradient(135deg,#1a202c 0%,#2d3748 100%); padding:50px 40px;">
-    <div style="max-width:960px; margin:0 auto;">
-        <div style="text-align:center; margin-bottom:40px;">
-            <h2 style="color:#fff; font-size:28px; font-weight:700; margin:0 0 10px;">How It Works</h2>
-            <p style="color:rgba(255,255,255,0.65); font-size:15px; margin:0;">Up and running in under a minute — literally 4 steps.</p>
-        </div>
 
-        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:16px;">
+<!-- HOW IT WORKS -->
+<div style="background:#f0fdfa;padding:30px;">
+    <h2 style="color:#0f766e;font-size:24px;font-weight:900;text-align:center;margin:0 0 24px 0;">How It Works</h2>
 
-            <!-- Step 1 -->
-            <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:14px; padding:28px 18px; text-align:center;">
-                <div style="width:44px; height:44px; background:linear-gradient(135deg,#875A7B,#6b3f6b); border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:18px; font-weight:800; color:#fff; margin-bottom:14px; line-height:44px;">1</div>
-                <div style="font-size:15px; font-weight:600; color:#fff; margin-bottom:6px;">Install Module</div>
-                <div style="font-size:13px; color:rgba(255,255,255,0.6); line-height:1.5;">Search "Fixed Discount" in the Apps menu and install it.</div>
-            </div>
-
-            <!-- Arrow -->
-            <div style="display:flex; align-items:center; justify-content:center; font-size:24px; color:rgba(255,255,255,0.3); min-width:30px;">→</div>
-
-            <!-- Step 2 -->
-            <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:14px; padding:28px 18px; text-align:center;">
-                <div style="width:44px; height:44px; background:linear-gradient(135deg,#0284c7,#0369a1); border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:18px; font-weight:800; color:#fff; margin-bottom:14px; line-height:44px;">2</div>
-                <div style="font-size:15px; font-weight:600; color:#fff; margin-bottom:6px;">Open Sale Order</div>
-                <div style="font-size:13px; color:rgba(255,255,255,0.6); line-height:1.5;">Navigate to any sale order — you'll see the new "Discount Amt" column.</div>
-            </div>
-
-            <!-- Arrow -->
-            <div style="display:flex; align-items:center; justify-content:center; font-size:24px; color:rgba(255,255,255,0.3); min-width:30px;">→</div>
-
-            <!-- Step 3 -->
-            <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:14px; padding:28px 18px; text-align:center;">
-                <div style="width:44px; height:44px; background:linear-gradient(135deg,#16a34a,#15803d); border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:18px; font-weight:800; color:#fff; margin-bottom:14px; line-height:44px;">3</div>
-                <div style="font-size:15px; font-weight:600; color:#fff; margin-bottom:6px;">Enter Amount</div>
-                <div style="font-size:13px; color:rgba(255,255,255,0.6); line-height:1.5;">Type the discount in currency (e.g. 500). The % auto-fills instantly.</div>
-            </div>
-
-            <!-- Arrow -->
-            <div style="display:flex; align-items:center; justify-content:center; font-size:24px; color:rgba(255,255,255,0.3); min-width:30px;">→</div>
-
-            <!-- Step 4 -->
-            <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:14px; padding:28px 18px; text-align:center;">
-                <div style="width:44px; height:44px; background:linear-gradient(135deg,#d97706,#b45309); border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:18px; font-weight:800; color:#fff; margin-bottom:14px; line-height:44px;">4</div>
-                <div style="font-size:15px; font-weight:600; color:#fff; margin-bottom:6px;">Confirm &amp; Invoice</div>
-                <div style="font-size:13px; color:rgba(255,255,255,0.6); line-height:1.5;">Confirm the order. Discount flows to the invoice automatically.</div>
-            </div>
-
+    <div style="background:#ffffff;border-left:5px solid #0f766e;border-radius:8px;padding:18px 20px;margin-bottom:12px;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+        <div style="width:34px;height:34px;background:#0f766e;color:#ffffff;border-radius:50%;display:inline-block;text-align:center;line-height:34px;font-size:16px;font-weight:900;margin-right:14px;vertical-align:middle;">1</div>
+        <div style="display:inline-block;vertical-align:middle;width:calc(100% - 62px);">
+            <div style="font-weight:800;color:#111111;font-size:15px;">Install the module</div>
+            <div style="color:#555555;font-size:13px;margin-top:3px;">Search "Fixed Discount" in the Odoo Apps menu and install.</div>
         </div>
     </div>
+
+    <div style="background:#ffffff;border-left:5px solid #0369a1;border-radius:8px;padding:18px 20px;margin-bottom:12px;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+        <div style="width:34px;height:34px;background:#0369a1;color:#ffffff;border-radius:50%;display:inline-block;text-align:center;line-height:34px;font-size:16px;font-weight:900;margin-right:14px;vertical-align:middle;">2</div>
+        <div style="display:inline-block;vertical-align:middle;width:calc(100% - 62px);">
+            <div style="font-weight:800;color:#111111;font-size:15px;">Open any Sale Order</div>
+            <div style="color:#555555;font-size:13px;margin-top:3px;">You will see the new "Discount Amount" column on the order lines.</div>
+        </div>
+    </div>
+
+    <div style="background:#ffffff;border-left:5px solid #15803d;border-radius:8px;padding:18px 20px;margin-bottom:12px;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+        <div style="width:34px;height:34px;background:#15803d;color:#ffffff;border-radius:50%;display:inline-block;text-align:center;line-height:34px;font-size:16px;font-weight:900;margin-right:14px;vertical-align:middle;">3</div>
+        <div style="display:inline-block;vertical-align:middle;width:calc(100% - 62px);">
+            <div style="font-weight:800;color:#111111;font-size:15px;">Enter the discount amount</div>
+            <div style="color:#555555;font-size:13px;margin-top:3px;">Type the amount (e.g. 500). The discount % calculates automatically.</div>
+        </div>
+    </div>
+
+    <div style="background:#ffffff;border-left:5px solid #7c3aed;border-radius:8px;padding:18px 20px;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+        <div style="width:34px;height:34px;background:#7c3aed;color:#ffffff;border-radius:50%;display:inline-block;text-align:center;line-height:34px;font-size:16px;font-weight:900;margin-right:14px;vertical-align:middle;">4</div>
+        <div style="display:inline-block;vertical-align:middle;width:calc(100% - 62px);">
+            <div style="font-weight:800;color:#111111;font-size:15px;">Confirm &amp; Invoice</div>
+            <div style="color:#555555;font-size:13px;margin-top:3px;">Confirm the order and create an invoice — discount flows over automatically.</div>
+        </div>
+    </div>
+
 </div>
 
-<!-- ═══════════════════════════════════════════════
-     PERFECT FOR — USE CASES
-═══════════════════════════════════════════════ -->
-<div style="background:#f9f6fb; padding:50px 40px;">
-    <div style="max-width:960px; margin:0 auto;">
-        <div style="text-align:center; margin-bottom:36px;">
-            <h2 style="color:#1a202c; font-size:28px; font-weight:700; margin:0 0 10px;">Perfect For</h2>
-            <p style="color:#718096; font-size:15px; margin:0;">Teams that deal with real-world discount negotiations every day.</p>
-        </div>
 
-        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px;">
+<!-- PERFECT FOR -->
+<div style="background:#134e4a;padding:30px;">
+    <h2 style="color:#ffffff;font-size:24px;font-weight:900;text-align:center;margin:0 0 20px 0;">Perfect For</h2>
 
-            <div style="background:#fff; border-radius:12px; padding:20px 24px; display:flex; align-items:flex-start; gap:14px; border:1px solid #e9d5ff; box-shadow:0 2px 8px rgba(135,90,123,0.07);">
-                <span style="font-size:24px; flex-shrink:0; margin-top:2px;">🤝</span>
-                <div>
-                    <div style="font-weight:700; color:#1a202c; font-size:14px; margin-bottom:4px;">Negotiated Deals</div>
-                    <div style="font-size:13px; color:#6b7280; line-height:1.5;">Customer says "give me ₹500 off" — just type 500, done.</div>
-                </div>
-            </div>
-
-            <div style="background:#fff; border-radius:12px; padding:20px 24px; display:flex; align-items:flex-start; gap:14px; border:1px solid #bfdbfe; box-shadow:0 2px 8px rgba(2,132,199,0.07);">
-                <span style="font-size:24px; flex-shrink:0; margin-top:2px;">📊</span>
-                <div>
-                    <div style="font-weight:700; color:#1a202c; font-size:14px; margin-bottom:4px;">Sales Teams</div>
-                    <div style="font-size:13px; color:#6b7280; line-height:1.5;">Reps who think in amounts, not percentages, work faster.</div>
-                </div>
-            </div>
-
-            <div style="background:#fff; border-radius:12px; padding:20px 24px; display:flex; align-items:flex-start; gap:14px; border:1px solid #bbf7d0; box-shadow:0 2px 8px rgba(22,163,74,0.07);">
-                <span style="font-size:24px; flex-shrink:0; margin-top:2px;">💼</span>
-                <div>
-                    <div style="font-weight:700; color:#1a202c; font-size:14px; margin-bottom:4px;">B2B Businesses</div>
-                    <div style="font-size:13px; color:#6b7280; line-height:1.5;">Contract discounts are always in currency terms, never percentage.</div>
-                </div>
-            </div>
-
-            <div style="background:#fff; border-radius:12px; padding:20px 24px; display:flex; align-items:flex-start; gap:14px; border:1px solid #fde68a; box-shadow:0 2px 8px rgba(217,119,6,0.07);">
-                <span style="font-size:24px; flex-shrink:0; margin-top:2px;">🖨️</span>
-                <div>
-                    <div style="font-weight:700; color:#1a202c; font-size:14px; margin-bottom:4px;">Customer Quotations</div>
-                    <div style="font-size:13px; color:#6b7280; line-height:1.5;">Show clear savings amounts on PDF quotations — customers love it.</div>
-                </div>
-            </div>
-
-            <div style="background:#fff; border-radius:12px; padding:20px 24px; display:flex; align-items:flex-start; gap:14px; border:1px solid #fecaca; box-shadow:0 2px 8px rgba(220,38,38,0.07);">
-                <span style="font-size:24px; flex-shrink:0; margin-top:2px;">🏪</span>
-                <div>
-                    <div style="font-weight:700; color:#1a202c; font-size:14px; margin-bottom:4px;">Retail &amp; Wholesale</div>
-                    <div style="font-size:13px; color:#6b7280; line-height:1.5;">Flat discount offers like "₹200 off per unit" are now trivial.</div>
-                </div>
-            </div>
-
-            <div style="background:#fff; border-radius:12px; padding:20px 24px; display:flex; align-items:flex-start; gap:14px; border:1px solid #d9f99d; box-shadow:0 2px 8px rgba(101,163,13,0.07);">
-                <span style="font-size:24px; flex-shrink:0; margin-top:2px;">📦</span>
-                <div>
-                    <div style="font-weight:700; color:#1a202c; font-size:14px; margin-bottom:4px;">Distributors</div>
-                    <div style="font-size:13px; color:#6b7280; line-height:1.5;">Per-item fixed discounts across large order lines with zero errors.</div>
-                </div>
-            </div>
-
-        </div>
+    <div style="margin-bottom:10px;padding:16px 18px;background:rgba(255,255,255,0.10);border-radius:8px;border-left:4px solid #2dd4bf;">
+        <span style="color:#2dd4bf;font-weight:900;margin-right:10px;font-size:16px;">✔</span>
+        <strong style="font-size:15px;color:#ffffff;">Negotiated deals</strong><span style="color:rgba(255,255,255,0.75);font-size:14px;"> — customer says "give me ₹500 off", just type 500 and done.</span>
     </div>
+    <div style="margin-bottom:10px;padding:16px 18px;background:rgba(255,255,255,0.10);border-radius:8px;border-left:4px solid #38bdf8;">
+        <span style="color:#38bdf8;font-weight:900;margin-right:10px;font-size:16px;">✔</span>
+        <strong style="font-size:15px;color:#ffffff;">Sales teams</strong><span style="color:rgba(255,255,255,0.75);font-size:14px;"> that think in amounts, not percentages.</span>
+    </div>
+    <div style="margin-bottom:10px;padding:16px 18px;background:rgba(255,255,255,0.10);border-radius:8px;border-left:4px solid #86efac;">
+        <span style="color:#86efac;font-weight:900;margin-right:10px;font-size:16px;">✔</span>
+        <strong style="font-size:15px;color:#ffffff;">B2B businesses</strong><span style="color:rgba(255,255,255,0.75);font-size:14px;"> where contract discounts are agreed in currency terms.</span>
+    </div>
+    <div style="margin-bottom:10px;padding:16px 18px;background:rgba(255,255,255,0.10);border-radius:8px;border-left:4px solid #c4b5fd;">
+        <span style="color:#c4b5fd;font-weight:900;margin-right:10px;font-size:16px;">✔</span>
+        <strong style="font-size:15px;color:#ffffff;">Customer quotations</strong><span style="color:rgba(255,255,255,0.75);font-size:14px;"> — show clear savings amounts on PDF quotations.</span>
+    </div>
+    <div style="padding:16px 18px;background:rgba(255,255,255,0.10);border-radius:8px;border-left:4px solid #fda4af;">
+        <span style="color:#fda4af;font-weight:900;margin-right:10px;font-size:16px;">✔</span>
+        <strong style="font-size:15px;color:#ffffff;">Retail &amp; Wholesale</strong><span style="color:rgba(255,255,255,0.75);font-size:14px;"> — flat discount offers like "₹200 off per unit".</span>
+    </div>
+
 </div>
 
-<!-- ═══════════════════════════════════════════════
-     TECHNICAL DETAILS
-═══════════════════════════════════════════════ -->
-<div style="background:#fff; padding:50px 40px; border-top:1px solid #e2e8f0;">
-    <div style="max-width:960px; margin:0 auto;">
-        <div style="text-align:center; margin-bottom:36px;">
-            <h2 style="color:#1a202c; font-size:28px; font-weight:700; margin:0 0 10px;">Technical Details</h2>
-        </div>
 
-        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px;">
+<!-- TECHNICAL INFO -->
+<div style="background:#f0fdfa;padding:30px;">
+    <h2 style="color:#0f766e;font-size:24px;font-weight:900;text-align:center;margin:0 0 20px 0;">Technical Info</h2>
 
-            <div style="background:#fdf4ff; border:1px solid #e9d5ff; border-radius:12px; padding:20px 24px; text-align:center;">
-                <div style="font-size:28px; margin-bottom:10px;">📦</div>
-                <div style="font-size:13px; font-weight:600; color:#6b21a8; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:4px;">Module Name</div>
-                <div style="font-size:15px; font-weight:700; color:#1a202c;">sale_order_line_fixed_discount</div>
-            </div>
-
-            <div style="background:#eff6ff; border:1px solid #bfdbfe; border-radius:12px; padding:20px 24px; text-align:center;">
-                <div style="font-size:28px; margin-bottom:10px;">🔢</div>
-                <div style="font-size:13px; font-weight:600; color:#1d4ed8; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:4px;">Odoo Version</div>
-                <div style="font-size:15px; font-weight:700; color:#1a202c;">18.0</div>
-            </div>
-
-            <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:12px; padding:20px 24px; text-align:center;">
-                <div style="font-size:28px; margin-bottom:10px;">🔗</div>
-                <div style="font-size:13px; font-weight:600; color:#15803d; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:4px;">Dependencies</div>
-                <div style="font-size:15px; font-weight:700; color:#1a202c;">sale, account</div>
-            </div>
-
-            <div style="background:#fffbeb; border:1px solid #fde68a; border-radius:12px; padding:20px 24px; text-align:center;">
-                <div style="font-size:28px; margin-bottom:10px;">📜</div>
-                <div style="font-size:13px; font-weight:600; color:#b45309; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:4px;">License</div>
-                <div style="font-size:15px; font-weight:700; color:#1a202c;">LGPL-3</div>
-            </div>
-
-        </div>
+    <div style="background:#ffffff;border:2px solid #99f6e4;border-radius:10px;padding:16px 20px;margin-bottom:12px;box-shadow:0 2px 6px rgba(0,0,0,0.05);">
+        <span style="font-weight:800;color:#0f766e;font-size:14px;">VERSION &nbsp;</span>
+        <span style="font-weight:700;color:#111111;font-size:15px;">18.0</span>
     </div>
+    <div style="background:#ffffff;border:2px solid #99f6e4;border-radius:10px;padding:16px 20px;margin-bottom:12px;box-shadow:0 2px 6px rgba(0,0,0,0.05);">
+        <span style="font-weight:800;color:#0f766e;font-size:14px;">LICENSE &nbsp;</span>
+        <span style="font-weight:700;color:#111111;font-size:15px;">LGPL-3</span>
+    </div>
+    <div style="background:#ffffff;border:2px solid #99f6e4;border-radius:10px;padding:16px 20px;box-shadow:0 2px 6px rgba(0,0,0,0.05);">
+        <span style="font-weight:800;color:#0f766e;font-size:14px;">DEPENDS ON &nbsp;</span>
+        <span style="font-weight:700;color:#111111;font-size:15px;">sale, account</span>
+    </div>
+
 </div>
 
-<!-- ═══════════════════════════════════════════════
-     DEVELOPER / CONTACT FOOTER
-═══════════════════════════════════════════════ -->
-<div style="background:linear-gradient(135deg,#1a202c 0%,#2d3748 100%); padding:50px 40px 30px; text-align:center;">
 
-    <!-- avatar placeholder -->
-    <div style="width:70px; height:70px; background:linear-gradient(135deg,#875A7B,#6b3f6b); border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:30px; margin-bottom:16px; border:3px solid rgba(255,255,255,0.2);">👨‍💻</div>
+<!-- FOOTER -->
+<div style="background:#0f766e;padding:40px 30px;text-align:center;">
 
-    <h3 style="color:#fff; font-size:22px; font-weight:700; margin:0 0 6px;">Developed by Prabhat</h3>
-    <p style="color:rgba(255,255,255,0.6); font-size:14px; margin:0 0 30px;">Odoo Freelancer &amp; Module Developer · India</p>
+    <div style="width:66px;height:66px;background:#065f46;border-radius:50%;display:inline-block;line-height:66px;font-size:30px;margin-bottom:16px;border:3px solid rgba(255,255,255,0.25);">👨‍💻</div>
 
-    <!-- contact cards -->
-    <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:16px; margin-bottom:32px;">
+    <h3 style="color:#ffffff;font-size:22px;font-weight:900;margin:0 0 6px 0;">Developed by Prabhat</h3>
+    <p style="color:rgba(255,255,255,0.70);font-size:14px;margin:0 0 24px 0;">Odoo Freelancer &amp; Module Developer · India</p>
 
-        <div style="background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); border-radius:12px; padding:16px 24px; min-width:180px;">
-            <div style="font-size:20px; margin-bottom:8px;">📱</div>
-            <div style="color:rgba(255,255,255,0.5); font-size:11px; text-transform:uppercase; letter-spacing:0.8px; margin-bottom:4px;">WhatsApp</div>
-            <div style="color:#fff; font-size:15px; font-weight:600;">+91 7982425142</div>
+    <div style="margin-bottom:20px;">
+        <div style="display:inline-block;background:rgba(0,0,0,0.20);border:1px solid rgba(255,255,255,0.25);border-radius:10px;padding:14px 22px;margin:6px;vertical-align:top;text-align:center;">
+            <div style="font-size:20px;margin-bottom:6px;">📱</div>
+            <div style="color:rgba(255,255,255,0.60);font-size:11px;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;">WhatsApp</div>
+            <div style="color:#ffffff;font-size:14px;font-weight:800;">+91 7982425142</div>
         </div>
-
-        <div style="background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); border-radius:12px; padding:16px 24px; min-width:180px;">
-            <div style="font-size:20px; margin-bottom:8px;">✉️</div>
-            <div style="color:rgba(255,255,255,0.5); font-size:11px; text-transform:uppercase; letter-spacing:0.8px; margin-bottom:4px;">Email</div>
-            <div style="color:#fff; font-size:15px; font-weight:600;">prabhatshaw24@gmail.com</div>
+        <div style="display:inline-block;background:rgba(0,0,0,0.20);border:1px solid rgba(255,255,255,0.25);border-radius:10px;padding:14px 22px;margin:6px;vertical-align:top;text-align:center;">
+            <div style="font-size:20px;margin-bottom:6px;">✉️</div>
+            <div style="color:rgba(255,255,255,0.60);font-size:11px;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;">Email</div>
+            <div style="color:#ffffff;font-size:14px;font-weight:800;">prabhatshaw24@gmail.com</div>
         </div>
-
-        <div style="background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); border-radius:12px; padding:16px 24px; min-width:180px;">
-            <div style="font-size:20px; margin-bottom:8px;">🌐</div>
-            <div style="color:rgba(255,255,255,0.5); font-size:11px; text-transform:uppercase; letter-spacing:0.8px; margin-bottom:4px;">GitHub</div>
-            <div style="color:#a78bfa; font-size:14px; font-weight:600;">github.com/Shabdprabhat</div>
-        </div>
-
     </div>
 
-    <!-- availability banner -->
-    <div style="background:rgba(22,163,74,0.15); border:1px solid rgba(22,163,74,0.35); border-radius:10px; padding:12px 20px; display:inline-block; margin-bottom:28px;">
-        <span style="color:#4ade80; font-size:13px; font-weight:600;">🟢 Available for Odoo Customization Projects</span>
+    <div style="display:inline-block;background:rgba(0,0,0,0.20);border:1px solid rgba(255,255,255,0.30);border-radius:8px;padding:10px 22px;margin-bottom:26px;">
+        <span style="color:#ccfbf1;font-size:13px;font-weight:800;">🟢 Available for Odoo Customization Projects</span>
     </div>
 
-    <div style="border-top:1px solid rgba(255,255,255,0.08); padding-top:20px;">
-        <p style="color:rgba(255,255,255,0.35); font-size:12px; margin:0;">
-            © 2024 Prabhat Shaw · Built with ❤️ for the Odoo Community · LGPL-3 License
+    <div style="border-top:1px solid rgba(255,255,255,0.15);padding-top:18px;">
+        <p style="color:rgba(255,255,255,0.45);font-size:12px;margin:0;">
+            © 2024 Prabhat Shaw &nbsp;·&nbsp; Built for the Odoo Community &nbsp;·&nbsp; LGPL-3
         </p>
     </div>
 
 </div>
+
 
 </body>
 </html>
