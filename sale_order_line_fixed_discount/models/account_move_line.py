@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
+from odoo.tools import float_round
 
 
 class AccountMoveLine(models.Model):
@@ -23,7 +24,9 @@ class AccountMoveLine(models.Model):
             if line.discount:
                 # Standard logic: discount amount = (price_unit * quantity) * (discount / 100)
                 base_amount = line.price_unit * line.quantity
-                line.discount_amount = base_amount * (line.discount / 100)
+                discount_amount = base_amount * (line.discount / 100)
+                # Round to match the field's precision
+                line.discount_amount = float_round(discount_amount, precision_digits=2)
             else:
                 line.discount_amount = 0.0
 
@@ -33,7 +36,9 @@ class AccountMoveLine(models.Model):
             if line.discount_amount:
                 base_amount = line.price_unit * line.quantity
                 if base_amount > 0:
-                    line.discount = (line.discount_amount / base_amount) * 100
+                    discount_percentage = (line.discount_amount / base_amount) * 100
+                    # Round to 2 decimal places (standard discount field precision)
+                    line.discount = float_round(discount_percentage, precision_digits=2)
                 else:
                     line.discount = 0.0
             else:

@@ -14,6 +14,7 @@ and **Invoices**.
 
 - **Fixed Discount Amount Field**: Enter an exact discount in your currency directly on each sale order line — no need to calculate percentages manually.
 - **Auto Percentage Calculation**: Enter a fixed amount and the discount percentage is calculated automatically. Change the percentage and the amount updates too.
+- **Instant UI Updates**: Discount percentage updates instantly as you type the discount amount, without needing to save the order.
 - **Visible in Table & Popup**: The Discount Amount column appears directly in the order lines table — no need to open each line individually.
 - **Invoice Integration**: The fixed discount amount carries over to invoices/bills automatically, keeping your accounting accurate.
 - **PDF Quotation Support**: Discount amounts print on the PDF quotation and invoice so your customers can clearly see the savings on each line.
@@ -45,9 +46,21 @@ and **Invoices**.
 | Models Extended | sale.order.line, account.move.line |
 | No Extra Configuration | Works immediately after install |
 
-## Development
+## Development & Customization
 
 Developed by Prabhat Module.
 
-For customizations, feature requests, or support — feel free to reach out.
+**For customizations, feature requests, or support — feel free to reach out:**
+
+- 📱 **Phone/WhatsApp:** +91 7982425142 (India)
+- ✉️ **Email:** prabhatshaw24@gmail.com
+- 🌐 **GitHub:** https://github.com/Shabdprabhat/prabhat-odoo-modules
+
+I am available for freelance Odoo customization work. Feel free to contact me for:
+- Custom module development
+- Odoo customization and configuration
+- Bug fixes and performance optimization
+- Integration with third-party applications
+- Training and consulting
+
 Built with care for the Odoo Community.
