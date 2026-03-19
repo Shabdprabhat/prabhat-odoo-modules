@@ -20,7 +20,7 @@
         - Email: prabhatshaw24@gmail.com
     """,
     'author': 'Prabhat',
-    'website': 'https://github.com/Shabdprabhat/prabhat-odoo-modules',
+    'website': 'https://shabdprabhat.github.io',
     'depends': ['sale_management', 'account'],
     'data': [
         'security/ir.model.access.csv',
