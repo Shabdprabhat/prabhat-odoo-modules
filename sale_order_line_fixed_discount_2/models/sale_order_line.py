@@ -53,16 +53,3 @@ class SaleOrderLine(models.Model):
                 base_amount = line.price_unit * line.product_uom_qty
                 if line.discount_amount > base_amount:
                     raise ValidationError(_("Discount amount cannot exceed the line's total price."))
-
-    def _prepare_invoice_line(self, **optional_values):
-        """Ensure discount is passed to invoice line."""
-        result = super()._prepare_invoice_line(**optional_values)
-        discount_to_set = self.discount
-        if self.discount_amount:
-            base_amount = self.price_unit * self.product_uom_qty
-            if base_amount > 0:
-                discount_to_set = (self.discount_amount / base_amount) * 100
-            result['discount_amount'] = self.discount_amount
-        if discount_to_set:
-            result['discount'] = discount_to_set
-        return result

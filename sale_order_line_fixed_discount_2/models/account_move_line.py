@@ -4,27 +4,26 @@ from odoo.exceptions import ValidationError
 from odoo.tools import float_round
 
 
-class SaleOrderLine(models.Model):
-    _inherit = 'sale.order.line'
+class AccountMoveLine(models.Model):
+    _inherit = 'account.move.line'
 
     discount_amount = fields.Float(
         string='Fixed Discount Amount',
         digits='Product Price',
-        help="Fixed discount amount applied to the line. "
-             "This will override the percentage discount if set.",
+        help="Fixed discount amount applied to the invoice line.",
         compute='_compute_discount_amount',
         inverse='_inverse_discount_amount',
         store=True,
         readonly=False
     )
 
-    @api.depends('price_unit', 'product_uom_qty', 'discount')
+    @api.depends('price_unit', 'quantity', 'discount')
     def _compute_discount_amount(self):
         """Compute discount amount based on percentage discount."""
         for line in self:
             if line.discount:
-                # Standard Odoo logic: discount is percentage of (price_unit * product_uom_qty)
-                base_amount = line.price_unit * line.product_uom_qty
+                # Standard logic: discount amount = (price_unit * quantity) * (discount / 100)
+                base_amount = line.price_unit * line.quantity
                 discount_amount = base_amount * (line.discount / 100)
                 # Round to match the field's precision
                 line.discount_amount = float_round(discount_amount, precision_digits=2)
@@ -35,7 +34,7 @@ class SaleOrderLine(models.Model):
         """Set percentage discount based on discount amount."""
         for line in self:
             if line.discount_amount:
-                base_amount = line.price_unit * line.product_uom_qty
+                base_amount = line.price_unit * line.quantity
                 if base_amount > 0:
                     discount_percentage = (line.discount_amount / base_amount) * 100
                     # Round to 2 decimal places (standard discount field precision)
@@ -48,21 +47,10 @@ class SaleOrderLine(models.Model):
     @api.constrains('discount_amount')
     def _check_discount_amount(self):
         """Ensure discount amount does not exceed line subtotal."""
+
+
         for line in self:
             if line.discount_amount:
-                base_amount = line.price_unit * line.product_uom_qty
+                base_amount = line.price_unit * line.quantity
                 if line.discount_amount > base_amount:
                     raise ValidationError(_("Discount amount cannot exceed the line's total price."))
-
-    def _prepare_invoice_line(self, **optional_values):
-        """Ensure discount is passed to invoice line."""
-        result = super()._prepare_invoice_line(**optional_values)
-        discount_to_set = self.discount
-        if self.discount_amount:
-            base_amount = self.price_unit * self.product_uom_qty
-            if base_amount > 0:
-                discount_to_set = (self.discount_amount / base_amount) * 100
-            result['discount_amount'] = self.discount_amount
-        if discount_to_set:
-            result['discount'] = discount_to_set
-        return result

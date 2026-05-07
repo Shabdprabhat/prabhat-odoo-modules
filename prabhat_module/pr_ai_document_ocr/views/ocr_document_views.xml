@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_ocr_document_form" model="ir.ui.view">
+        <field name="name">ocr.document.form</field>
+        <field name="model">ocr.document</field>
+        <field name="arch" type="xml">
+            <form string="OCR Document">
+                <header>
+                    <button name="action_process_ocr" string="Process OCR" type="object" 
+                            class="oe_highlight" invisible="status == 'done'"/>
+                    <field name="status" widget="statusbar" statusbar_visible="pending,processing,done"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="document_type"/>
+                            <field name="document_date"/>
+                        </group>
+                        <group>
+                            <field name="confidence"/>
+                            <field name="user_id"/>
+                        </group>
+                    </group>
+                    <group string="Document">
+                        <field name="image" widget="image" options="{'size': [400, 300]}"/>
+                    </group>
+                    <group string="Extracted Text">
+                        <field name="extracted_text" widget="text" options="{'rows': 15}"/>
+                    </group>
+                    <group string="Created Records" invisible="not partner_id and not product_id and not invoice_id">
+                        <field name="partner_id"/>
+                        <field name="product_id"/>
+                        <field name="invoice_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_ocr_document_tree" model="ir.ui.view">
+        <field name="name">ocr.document.tree</field>
+        <field name="model">ocr.document</field>
+        <field name="arch" type="xml">
+            <tree string="OCR Documents" decoration-success="status=='done'" decoration-danger="status=='failed'">
+                <field name="name"/>
+                <field name="document_type"/>
+                <field name="document_date"/>
+                <field name="status"/>
+                <field name="confidence"/>
+                <field name="partner_id"/>
+                <field name="create_date"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_ocr_document" model="ir.actions.act_window">
+        <field name="name">OCR Documents</field>
+        <field name="res_model">ocr.document</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_ocr_documents" name="OCR Documents" 
+              parent="document.menu_documents_management" 
+              action="action_ocr_document" sequence="51"/>
+              
+    <record id="action_ocr_wizard" model="ir.actions.act_window">
+        <field name="name">Scan Document</field>
+        <field name="res_model">ocr.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

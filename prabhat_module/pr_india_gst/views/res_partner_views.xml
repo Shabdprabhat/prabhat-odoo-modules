@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_partner_gstin_form" model="ir.ui.view">
+        <field name="name">res.partner.gstin.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id">base.view_partner_form</field>
+        <field name="arch" type="xml">
+            <field name="vat" position="after">
+                <field name="gstin"/>
+                <field name="is_gst_applicable"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_hsn_code_tree" model="ir.ui.view">
+        <field name="name">hsn.code.tree</field>
+        <field name="model">hsn.code</field>
+        <field name="arch" type="xml">
+            <tree string="HSN Codes">
+                <field name="name"/>
+                <field name="description"/>
+                <field name="gst_rate"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_hsn_code_form" model="ir.ui.view">
+        <field name="name">hsn.code.form</field>
+        <field name="model">hsn.code</field>
+        <field name="arch" type="xml">
+            <form string="HSN Code">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                        <field name="gst_rate"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_hsn_code" model="ir.actions.act_window">
+        <field name="name">HSN Codes</field>
+        <field name="res_model">hsn.code</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_hsn_code" name="HSN Codes" 
+              parent="account.menu_finance_configuration" 
+              action="action_hsn_code" sequence="50"/>
+</odoo>

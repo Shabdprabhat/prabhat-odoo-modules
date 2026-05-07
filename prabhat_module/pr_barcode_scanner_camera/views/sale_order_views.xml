@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_barcode_scanner_button_sale" model="ir.ui.view">
+        <field name="name">sale.order.barcode.scanner.button</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id">sale.view_order_form</field>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_confirm']" position="before">
+                <button name="open_barcode_scanner" string="Scan Barcode" type="object" 
+                        class="oe_highlight" icon="fa-barcode"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_barcode_scanner_button_purchase" model="ir.ui.view">
+        <field name="name">purchase.order.barcode.scanner.button</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id">purchase.purchase_order_form</field>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='button_confirm']" position="before">
+                <button name="open_barcode_scanner" string="Scan Barcode" type="object" 
+                        class="oe_highlight" icon="fa-barcode"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_barcode_scan_tree" model="ir.ui.view">
+        <field name="name">barcode.scan.tree</field>
+        <field name="model">barcode.scan</field>
+        <field name="arch" type="xml">
+            <tree string="Barcode Scan Log">
+                <field name="name"/>
+                <field name="barcode"/>
+                <field name="product_id"/>
+                <field name="order_id"/>
+                <field name="scanned_date"/>
+                <field name="user_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_barcode_scan" model="ir.actions.act_window">
+        <field name="name">Barcode Scan Log</field>
+        <field name="res_model">barcode.scan</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <menuitem id="menu_barcode_scan" name="Barcode Scan Log" 
+              parent="stock.menu_stock_warehouse_mgmt" 
+              action="action_barcode_scan" sequence="100"/>
+</odoo>

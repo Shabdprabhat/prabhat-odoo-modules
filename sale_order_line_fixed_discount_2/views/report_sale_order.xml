@@ -25,6 +25,7 @@
                     <span t-else="">-</span>
                 </td>
             </xpath>
+
         </template>
     </data>
 </odoo>

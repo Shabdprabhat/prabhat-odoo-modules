@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_invoice_gst_form" model="ir.ui.view">
+        <field name="name">account.move.gst.form</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id">account.view_move_form</field>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='invoice_date']" position="after">
+                <field name="ewaybill_number"/>
+                <field name="ewaybill_date"/>
+                <field name="ewaybill_validity"/>
+            </xpath>
+            <xpath expr="//field[@name='amount_tax']" position="before">
+                <field name="cgst_amount"/>
+                <field name="sgst_amount"/>
+                <field name="igst_amount"/>
+                <field name="cess_amount"/>
+            </xpath>
+            <xpath expr="//group[@id='group_tax_out']" position="inside">
+                <button name="action_generate_ewaybill" string="Generate E-Way Bill" 
+                        type="object" class="oe_highlight" 
+                        invisible="move_type not in ('out_invoice', 'out_refund')"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_invoice_gst_tree" model="ir.ui.view">
+        <field name="name">account.move.gst.tree</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id">account.view_invoice_tree</field>
+        <field name="arch" type="xml">
+            <field name="invoice_date" position="after">
+                <field name="ewaybill_number" optional="show"/>
+            </field>
+        </field>
+    </record>
+</odoo>

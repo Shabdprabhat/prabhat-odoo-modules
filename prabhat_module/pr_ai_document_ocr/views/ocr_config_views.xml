@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_ocr_config_form" model="ir.ui.view">
+        <field name="name">ocr.config.form</field>
+        <field name="model">ocr.config</field>
+        <field name="arch" type="xml">
+            <form string="OCR Configuration">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="active"/>
+                        <field name="ocr_type"/>
+                        <field name="language"/>
+                    </group>
+                    <group string="API Settings" invisible="ocr_type == 'tesseract'">
+                        <field name="api_key"/>
+                        <field name="api_endpoint"/>
+                    </group>
+                    <group string="Auto Actions">
+                        <field name="auto_create_contact"/>
+                        <field name="auto_create_product"/>
+                        <field name="auto_create_invoice"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_ocr_config_tree" model="ir.ui.view">
+        <field name="name">ocr.config.tree</field>
+        <field name="model">ocr.config</field>
+        <field name="arch" type="xml">
+            <tree string="OCR Configurations">
+                <field name="name"/>
+                <field name="ocr_type"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_ocr_config" model="ir.actions.act_window">
+        <field name="name">OCR Configuration</field>
+        <field name="res_model">ocr.config</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_ocr_config" name="OCR Settings" 
+              parent="document.menu_documents_management" 
+              action="action_ocr_config" sequence="50"/>
+</odoo>

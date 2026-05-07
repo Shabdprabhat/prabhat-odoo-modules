@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hsn_code,hsn.code,model_hsn_code,base.group_user,1,1,1,1
+access_gst_config,gst.config,model_gst_config,base.group_account_manager,1,1,1,1

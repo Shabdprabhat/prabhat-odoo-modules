@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ecommerce_config,ecommerce.config,model_ecommerce_config,base.group_sales_manager,1,1,1,1
+access_ecommerce_order_mapping,ecommerce.order.mapping,model_ecommerce_order_mapping,base.group_user,1,1,1,1
+access_ecommerce_product_mapping,ecommerce.product.mapping,model_ecommerce_product_mapping,base.group_user,1,1,1,1
