@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_packmate_kit_line_user,packmate.kit.line.user,model_packmate_kit_line,base.group_user,1,0,0,0
+access_packmate_kit_line_sale_user,packmate.kit.line.sale.user,model_packmate_kit_line,sales_team.group_sale_salesman,1,1,1,0
+access_packmate_kit_line_manager,packmate.kit.line.manager,model_packmate_kit_line,sales_team.group_sale_manager,1,1,1,1
+access_packmate_kit_line_admin,packmate.kit.line.admin,model_packmate_kit_line,base.group_system,1,1,1,1

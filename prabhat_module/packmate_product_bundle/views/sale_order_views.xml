@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="packmate_sale_order_form_view" model="ir.ui.view">
+        <field name="name">sale.order.form.packmate</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_confirm']" position="before">
+                <button name="action_packmate_expand_all"
+                        string="Expand PackMate Kits"
+                        type="object"
+                        class="btn-secondary"
+                        invisible="state not in ['draft', 'sent'] or not packmate_has_kit_lines"/>
+            </xpath>
+            <xpath expr="//sheet" position="inside">
+                <field name="packmate_has_kit_lines" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="sale_order_line_list_view_packmate" model="ir.ui.view">
+        <field name="name">sale.order.line.list.packmate</field>
+        <field name="model">sale.order.line</field>
+        <field name="inherit_id" ref="sale.view_order_line_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="packmate_is_kit_parent" optional="show" readonly="1"/>
+                <field name="packmate_kit_line_id" optional="hide" readonly="1"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

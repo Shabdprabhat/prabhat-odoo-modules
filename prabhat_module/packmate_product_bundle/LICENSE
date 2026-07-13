@@ -1,0 +1,136 @@
+GNU LESSER GENERAL PUBLIC LICENSE
+Version 3, 29 June 2007
+
+Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
+Everyone is permitted to copy and distribute verbatim copies
+of this license document, but changing it is not allowed.
+
+This version of the GNU Lesser General Public License incorporates
+the terms and conditions of version 3 of the GNU General Public
+License, supplemented by the additional permissions listed below.
+
+0. Additional Definitions.
+
+As used throughout this license, the following terms have their
+meanings as defined here:
+
+- The License refers to version 3 of the GNU Lesser General Public License.
+
+- The Library refers to a work of software predominantly used by the
+  GNU C library to implement the functionality of the GNU C Library
+  as described in its accompanying documentation.
+
+- A Modified Version of the Library means any work containing the
+  Library or a portion of it, either copied verbatim, or with
+  modifications and/or translated into another language.
+
+- The Source Code for a work means the preferred form of the work for
+  making modifications to it. For an executable work, complete Source
+  Code means all the Source Code for all modules it contains, plus
+  any associated interface definition files, plus the scripts used to
+  control compilation and installation of the executable.
+
+- The Corresponding Application Source for a work in Source Code form
+  means the source code for any associated application, including any
+  code and data needed to make, install, and/or run such application
+  from the Source Code, but excluding system libraries.
+
+- The Corresponding Application Source for a work in Object Code form
+  means the source code for any associated application, including any
+  code and data needed to make, install, and/or run such application
+  from the Object Code, but excluding system libraries.
+
+- The work means the library or work made available under this License.
+
+- The Library means a work covered by this License.
+
+- Library Code means any source code, object code, or any other code
+  that can be used to modify the Library, or to produce additional
+  Library Code, or to modify a work that uses the Library.
+
+- Application Code means any code that interfaces with the Library
+  but is not Library Code.
+
+- The "Library" refers to the library or work made available under this
+  License, which is distributed under the terms of this License, and
+  which includes all the Library Code.
+
+- The "Application" refers to any work that makes use of the Library.
+
+1. Exception.
+
+The Library Code and Application Code may be combined and distributed
+without restriction, provided that the license terms remain compatible
+with this License. In particular, if the Library Code is licensed under
+the GNU General Public License, and the Application Code is licensed
+under a compatible license, then the combined work may be distributed
+under either license.
+
+2. Combined Works.
+
+You may convey a combined work under the terms of your choice, provided
+that you also comply with the requirements of this License for each
+component of the combined work.
+
+3. Your Rights Under This License.
+
+The requirements of this license apply to the Library as a whole. When
+modifying the Library, you must extend this license to the entire
+modified library, and grant anyone access to it.
+
+4. Application of Additional Terms.
+
+You may add additional terms to the Library for your own use. However,
+when you distribute the Library Code or any portion thereof, you must
+not impose additional restrictions on recipients' exercise of the rights
+granted by this License.
+
+5. No Warranty.
+
+THERE IS NO WARRANTY FOR THE LIBRARY, TO THE EXTENT PERMITTED BY
+APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING, THE COPYRIGHT
+HOLDERS AND/OR OTHER PARTIES PROVIDE THE LIBRARY "AS IS" WITHOUT
+WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE
+OF THE LIBRARY IS WITH YOU. SHOULD THE LIBRARY PROVE DEFECTIVE, YOU
+ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
+
+6. Limitation of Liability.
+
+IN NO EVENT SHALL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY
+MODIFY AND/OR REDISTRIBUTE THE LIBRARY AS PERMITTED ABOVE, BE LIABLE
+TO YOU FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR
+CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE
+LIBRARY (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING
+RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A
+FAILURE OF THE LIBRARY TO OPERATE WITH ANY OTHER SOFTWARE), EVEN IF
+SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH
+DAMAGES.
+
+7. Interpretation of Sections 5 and 6.
+
+If the disclaimer of warranty and limitation of liability provided
+above cannot be given local legal effect according to their terms,
+reviewing courts shall apply local law that most closely approximates
+an absolute waiver of all civil liability in connection with the
+Library, unless a warranty or assumption of liability accompanies a
+copy of the Library in return for a fee.
+
+END OF TERMS AND CONDITIONS
+
+Copyright (C) 2024-2026 Prabhat
+
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this library; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA

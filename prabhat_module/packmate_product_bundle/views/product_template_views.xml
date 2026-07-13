@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="packmate_kit_line_tree_view" model="ir.ui.view">
+        <field name="name">packmate.kit.line.list</field>
+        <field name="model">packmate.kit.line</field>
+        <field name="arch" type="xml">
+            <list editable="bottom">
+                <field name="sequence" widget="handle"/>
+                <field name="product_id"/>
+                <field name="quantity"/>
+                <field name="product_uom_id" readonly="1"/>
+                <field name="sale_price" readonly="1"/>
+                <field name="cost_price" readonly="1" groups="base.group_user"/>
+                <field name="subtotal_sale_price" readonly="1"/>
+                <field name="subtotal_cost_price" readonly="1" groups="base.group_user"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="packmate_kit_line_form_view" model="ir.ui.view">
+        <field name="name">packmate.kit.line.form</field>
+        <field name="model">packmate.kit.line</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="kit_template_id" invisible="1"/>
+                        <field name="sequence" widget="handle"/>
+                        <field name="product_id"/>
+                        <field name="quantity"/>
+                        <field name="product_uom_id" readonly="1"/>
+                    </group>
+                    <group string="Pricing (Reference)">
+                        <field name="sale_price" readonly="1"/>
+                        <field name="cost_price" readonly="1" groups="base.group_user"/>
+                        <field name="subtotal_sale_price" readonly="1"/>
+                        <field name="subtotal_cost_price" readonly="1" groups="base.group_user"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="packmate_product_template_form_view" model="ir.ui.view">
+        <field name="name">product.template.form.packmate</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='type']" position="after">
+                <field name="is_packmate_kit" widget="boolean_toggle"/>
+            </xpath>
+
+            <xpath expr="//notebook" position="inside">
+                <page string="PackMate Components" invisible="not is_packmate_kit" name="packmate_page">
+                    <group>
+                        <field name="packmate_price_mode"/>
+                        <field name="packmate_cost_mode"/>
+                    </group>
+                    <group>
+                        <field name="packmate_component_sales_total" readonly="1"/>
+                        <field name="packmate_component_cost_total" readonly="1" groups="base.group_user"/>
+                    </group>
+                    <field name="packmate_component_line_ids"/>
+                    <footer>
+                        <button name="action_packmate_recompute_amounts"
+                                string="Recompute from Components"
+                                type="object"
+                                class="btn-primary"
+                                invisible="packmate_price_mode != 'components' and packmate_cost_mode != 'components'"/>
+                    </footer>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="product_template_kanban_view_packmate" model="ir.ui.view">
+        <field name="name">product.template.kanban.packmate</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_kanban_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//kanban" position="inside">
+                <field name="is_packmate_kit"/>
+                <field name="packmate_component_count"/>
+            </xpath>
+            <xpath expr="//t[@t-name='card']" position="inside">
+                <div t-if="record.is_packmate_kit.raw_value" class="mt-1">
+                    <span class="badge rounded-pill text-bg-success">PackMate Kit</span>
+                    <t t-if="record.packmate_component_count.raw_value > 0">
+                        <small class="text-muted ms-1">
+                            (<field name="packmate_component_count"/> components)
+                        </small>
+                    </t>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="packmate_product_template_search_view" model="ir.ui.view">
+        <field name="name">product.template.search.packmate</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_search_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='filter_to_sell']" position="after">
+                <filter string="PackMate Kits" name="packmate_kit" domain="[('is_packmate_kit', '=', True)]"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="packmate_product_template_action" model="ir.actions.act_window">
+        <field name="name">PackMate Kits</field>
+        <field name="res_model">product.template</field>
+        <field name="view_mode">list,form,kanban</field>
+        <field name="domain">[('is_packmate_kit', '=', True)]</field>
+        <field name="context">{'default_is_packmate_kit': True, 'default_type': 'service', 'search_default_packmate_kit': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first PackMate kit
+            </p>
+            <p>
+                Use kits to sell product bundles, sales kits, combo packs, and offer packs from quotations.
+            </p>
+        </field>
+    </record>
+</odoo>

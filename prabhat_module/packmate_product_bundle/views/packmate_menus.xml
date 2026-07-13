@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="packmate_menu_kits"
+              name="PackMate Kits"
+              parent="sale.product_menu_catalog"
+              action="packmate_product_template_action"
+              sequence="25"/>
+
+    <!-- Action is defined in product_template_views.xml -->
+</odoo>
