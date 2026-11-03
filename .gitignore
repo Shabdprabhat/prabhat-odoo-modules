@@ -7,3 +7,6 @@ __pycache__/
 # Odoo
 *.log
 .odoo_module_*
+
+# Modules published from their own repositories
+/prabhat_module/
