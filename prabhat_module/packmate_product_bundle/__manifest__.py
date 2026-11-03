@@ -36,6 +36,4 @@ Features:
     'auto_install': False,
     'license': 'LGPL-3',
     'images': ['static/description/banner.png'],
-    'price': 5,
-    'currency': 'USD',
 }
